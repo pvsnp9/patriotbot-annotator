@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patriotbot FAQ Annotation — Progress</title>
+<style>
+  *{box-sizing:border-box;} html,body{margin:0;padding:0;}
+  body{background:#f4f4f1;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1c1c1a;}
+  button{font-family:inherit;}
+  .wrap{width:90%;max-width:1100px;margin:0 auto;padding:18px 0;}
+  .cap{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px;padding-bottom:9px;border-bottom:1px solid #e0e0da;}
+  .cap b{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3a3a36;}
+  .who{font-size:12px;color:#6b6b64;}
+  .hidden{display:none;}
+  .btn{padding:10px 16px;font-size:14px;font-weight:700;cursor:pointer;color:#fff;background:#2f6f8f;border:1px solid #2f6f8f;border-radius:7px;}
+  .btn:disabled{opacity:.5;cursor:default;}
+  /* login */
+  .login{max-width:420px;margin:12vh auto;background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:26px;}
+  .login h2{margin:0 0 14px;font-size:18px;}
+  .login label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9a9a92;margin:0 0 6px;}
+  .login input{width:100%;padding:11px;border:1px solid #cdcdc5;border-radius:7px;font-size:14px;margin-bottom:14px;}
+  .err{min-height:18px;margin-top:10px;font-size:13px;font-weight:600;color:#b3543f;}
+  /* dashboard */
+  .dash-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .dash-title{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3a3a36;}
+  .panel{background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:8px 18px;}
+  .row{display:grid;grid-template-columns:1fr 220px 70px 120px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid #f2f2ee;}
+  .row:last-child{border-bottom:none;}
+  .label{font-size:14px;font-weight:600;color:#2a2a26;}
+  .email{color:#9a9a92;font-weight:400;font-size:12px;}
+  .tbadge{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8a6d3b;background:#fbf2dc;border:1px solid #ecdcb0;padding:2px 7px;border-radius:5px;margin-left:6px;}
+  .bar{height:12px;background:#e7e7e1;border-radius:999px;overflow:hidden;}
+  .fill{height:100%;background:#2f6f8f;}
+  .count{font-size:13px;color:#6b6b64;text-align:right;font-variant-numeric:tabular-nums;}
+  .btn-mini{padding:7px 0;font-size:12px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:6px;}
+  .empty{color:#8c8c84;font-size:14px;padding:14px 0;}
+  /* model win chart */
+  .chart-h{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#3a3a36;padding:10px 0;}
+  .chart-h .muted{font-weight:400;text-transform:none;letter-spacing:0;color:#9a9a92;font-size:12px;}
+  .crow{display:grid;grid-template-columns:180px 1fr 48px;gap:12px;align-items:center;padding:6px 0;}
+  .cmodel{font-size:13px;font-weight:600;color:#2a2a26;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .ctrack{height:18px;background:#eef1ef;border-radius:6px;overflow:hidden;}
+  .cfill{height:100%;background:#2f8f5b;border-radius:6px;min-width:2px;}
+  .cval{font-size:13px;font-weight:700;color:#33332f;text-align:right;font-variant-numeric:tabular-nums;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="cap"><b>Patriotbot FAQ Annotation</b><span class="who">Progress</span></div>
+
+  <!-- login -->
+  <section id="login" class="login">
+    <h2>Progress dashboard</h2>
+    <label for="pass">Pass</label>
+    <input id="pass" type="password" autocomplete="off" placeholder="Enter pass">
+    <button id="unlock" class="btn" style="width:100%;">Unlock</button>
+    <div class="err" id="login-msg"></div>
+  </section>
+
+  <!-- dashboard -->
+  <section id="dash" class="hidden">
+    <div class="dash-top">
+      <span class="dash-title">Annotator progress</span>
+      <button id="export-all" class="btn">Export All</button>
+    </div>
+
+    <div class="panel" style="margin-bottom:16px;">
+      <div class="chart-h">Best-answer wins by model <span class="muted">— excludes test accounts</span></div>
+      <div id="chart"></div>
+    </div>
+
+    <div class="panel" id="rows"></div>
+  </section>
+</div>
+<script src="./progress.js"></script>
+</body>
+</html>

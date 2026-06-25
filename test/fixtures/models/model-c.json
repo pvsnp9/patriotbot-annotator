@@ -1,0 +1,4 @@
+[
+  { "id": 128, "generated": "C: Use the IST registration override request process.", "model": "llama-3.1-8B-it", "mode": "sft" },
+  { "id": 201, "generated": "C: No, you must reach a 2.0 GPA first.", "model": "llama-3.1-8B-it", "mode": "sft" }
+]

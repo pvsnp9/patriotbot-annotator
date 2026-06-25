@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patriotbot FAQ Annotation</title>
+<style>
+  *{box-sizing:border-box;} html,body{margin:0;padding:0;}
+  body{background:#f4f4f1;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1c1c1a;}
+  button{font-family:inherit;}
+  .wrap{width:90%;max-width:1480px;margin:0 auto;padding:18px 0;}
+  .cap{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px;padding-bottom:9px;border-bottom:1px solid #e0e0da;}
+  .cap b{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3a3a36;}
+  .who{font-size:12px;color:#6b6b64;}
+  .hidden{display:none;}
+  /* entry: email + consent, themed to match the annotation cards */
+  .entry{max-width:480px;margin:9vh auto;background:#fff;border:1px solid #e3e3dd;border-radius:11px;padding:26px 28px;box-shadow:0 0 0 3px #f1f4f5;}
+  .entry h2{margin:0 0 6px;font-size:20px;color:#1a1a17;}
+  .entry .sub{margin:0 0 14px;font-size:13.5px;line-height:1.55;color:#6b6b64;}
+  .entry label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9a9a92;margin:12px 0 5px;}
+  .entry input[type=text],.entry input[type=email]{width:100%;padding:11px;border:1px solid #cdcdc5;border-radius:7px;font-size:14px;}
+  .entry input:focus{outline:none;border-color:#2f6f8f;box-shadow:0 0 0 3px #eef4f7;}
+  .entry input[readonly]{background:#f5f5f1;color:#6b6b64;}
+  .entry .save{width:100%;margin-top:18px;}
+  .statement{font-size:12.5px;line-height:1.6;color:#6b6b64;background:#faf9f6;border:1px solid #ece9df;border-radius:8px;padding:11px 13px;}
+  .agree{display:flex;gap:9px;align-items:flex-start;margin:16px 0 0;font-size:13px;color:#33332f;}
+  .exit{font-size:12px;font-weight:600;color:#6b6b64;background:#fff;border:1px solid #d2d2ca;border-radius:6px;padding:5px 12px;cursor:pointer;}
+  .exit:hover{background:#f5f5f1;}
+  /* annotate */
+  .grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px;align-items:start;}
+  .rolebar{display:flex;align-items:center;gap:9px;margin-bottom:6px;}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#2f6f8f;padding:3px 9px;border-radius:5px;}
+  .counter{margin-left:auto;font-size:12px;font-weight:600;color:#a4a49c;}
+  .counter b{font-size:13px;color:#2f6f8f;}
+  .group{border:1px solid #dcdcd4;background:#f9f9f6;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:13px;}
+  .card{background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:15px 20px;display:flex;flex-direction:column;gap:6px;}
+  .card.src{background:#f7f7f3;border:1px solid #e7e7e1;box-shadow:none;}
+  .badge{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b6b64;background:#efefea;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;}
+  .badge.green{color:#3f7a52;background:#e6f4ea;border-color:#c5e3cf;}
+  .q{font-size:18px;font-weight:700;line-height:1.4;color:#1a1a17;} .src .q{font-size:16px;color:#55554e;}
+  .ans{font-size:15px;line-height:1.65;color:#4a4a44;} .src .ans{font-size:14px;color:#6b6b64;}
+  .chips{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;}
+  .chips > div{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;}
+  .chip-l{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;line-height:1;}
+  .chip{display:inline-block;font-size:13px;line-height:1.3;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;}
+  .link{margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#33332f;border:1px solid #c9c9c1;padding:7px 15px;border-radius:6px;white-space:nowrap;}
+  .pick{background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:9px;}
+  .pick-h{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;}
+  .opt{display:flex;align-items:flex-start;gap:11px;cursor:pointer;padding:10px 12px;border-radius:8px;border:1px solid #e3e3dd;background:#fafaf7;transition:background .12s,border-color .12s;}
+  .opt.sel{border-color:#2f6f8f;background:#eef4f7;}
+  .radio{flex-shrink:0;margin-top:2px;width:16px;height:16px;border-radius:50%;border:2px solid #bcbcb4;display:flex;align-items:center;justify-content:center;}
+  .opt.sel .radio{border-color:#2f6f8f;}
+  .dot{width:8px;height:8px;border-radius:50%;background:transparent;}
+  .opt.sel .dot{background:#2f6f8f;}
+  .opt .text{font-size:14px;line-height:1.55;color:#33332f;}
+  .connector{display:flex;align-items:center;gap:10px;margin:12px 0 0 6px;}
+  .connector .lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;}
+  .connector .rule{flex:1;height:1px;background:#e3e3dd;}
+  .pager{display:flex;gap:10px;margin-top:13px;}
+  .pager button{flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;}
+  .pager button:disabled{opacity:.45;cursor:default;}
+  .hint{margin-top:13px;background:#fbfbf8;border:1px solid #e7e7e1;border-radius:9px;padding:12px 14px;color:#6b6b64;}
+  .hint b{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9a9a92;margin-bottom:7px;}
+  .hint ol{margin:0;padding-left:18px;font-size:12.5px;line-height:1.65;}
+  .hint li{margin:4px 0;} .hint strong{color:#4a4a44;}
+  .pager button:disabled{opacity:.45;cursor:default;}
+  .panel{background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:13px;}
+  .panel-h{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3a3a36;padding-bottom:10px;border-bottom:1px solid #f0f0eb;}
+  .metric .title{font-size:14px;font-weight:600;color:#2a2a26;display:block;}
+  .metric .help{font-size:12px;line-height:1.5;color:#8c8c84;display:block;margin:4px 0 6px;}
+  .opts{display:flex;gap:7px;}
+  .opts button{flex:1;padding:11px 0;font-size:15px;cursor:pointer;color:#4a4a44;background:#fff;border:1px solid #dcdcd5;border-radius:7px;}
+  .opts button.sel{color:#fff;font-weight:700;}
+  .save{padding:11px 0;font-size:14px;font-weight:700;cursor:pointer;color:#fff;background:#2f6f8f;border:1px solid #2f6f8f;border-radius:7px;}
+  .save:disabled{opacity:.5;cursor:default;}
+  .status{min-height:16px;font-size:12px;font-weight:600;color:#2f6f8f;}
+  .done{max-width:520px;margin:12vh auto;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="cap">
+    <b>Patriotbot FAQ Annotation</b>
+    <span style="display:flex;align-items:center;gap:12px;">
+      <span class="who" id="who"></span>
+      <button id="exit" class="exit hidden">Exit session</button>
+    </span>
+  </div>
+
+  <!-- email entry view -->
+  <section id="view-email" class="entry">
+    <h2>Welcome</h2>
+    <p class="sub">Enter your email to begin a new session or resume an existing one.</p>
+    <label for="e-email">Email</label>
+    <input id="e-email" type="email" autocomplete="email" placeholder="you@example.com">
+    <button id="e-btn" class="save">Continue</button>
+    <div class="status" id="e-status"></div>
+  </section>
+
+  <!-- consent view (new users) -->
+  <section id="view-consent" class="entry hidden">
+    <h2>Before you begin</h2>
+    <div class="statement" id="consent-text"></div>
+    <label>Email</label><input id="c-email" type="email" readonly>
+    <label>First name</label><input id="c-first" type="text">
+    <label>Last name</label><input id="c-last" type="text">
+    <div class="agree"><input id="c-agree" type="checkbox"><label for="c-agree" style="margin:0;text-transform:none;letter-spacing:0;font-weight:400;color:#33332f;">I agree to the statement above.</label></div>
+    <button id="c-btn" class="save" disabled>Agree &amp; start</button>
+    <div class="status" id="c-status"></div>
+  </section>
+
+  <!-- annotate view -->
+  <section id="view-annotate" class="hidden">
+    <div class="rolebar">
+      <span class="tag">To annotate</span>
+      <span style="font-size:12.5px;color:#6b6b64;">Synthesized FAQ — pick the best generated answer &amp; rate the pair</span>
+      <span class="counter"><b id="ct-done">0</b> / 100</span>
+    </div>
+    <div class="grid">
+      <div>
+        <div class="group">
+          <div class="card" id="item-card"></div>
+          <div class="pick">
+            <span class="pick-h">Pick the option that best answers the question above &mdash; all generated by SFT models</span>
+            <div id="options"></div>
+          </div>
+        </div>
+        <div class="connector">
+          <span class="lbl">Synthesized from</span><span class="rule"></span>
+          <span class="lbl" style="background:#ebebe6;padding:3px 9px;border-radius:5px;">Source seed</span>
+        </div>
+        <div class="card src" id="seed-card" style="margin-top:10px;"></div>
+        <div class="pager">
+          <button id="back" disabled>← Back</button>
+          <button id="next" disabled>Next →</button>
+        </div>
+        <div class="hint">
+          <b>How to annotate</b>
+          <ol>
+            <li>Read the question and its answer in the top card.</li>
+            <li>Use the <strong>Source · FAQ</strong> card at the bottom — the original FAQ this item was synthesized from — as your reference when judging accuracy.</li>
+            <li>Pick the <strong>single best</strong> answer from the options — the model names are hidden on purpose.</li>
+            <li>Rate the test pair using the panel on the right; the fields shown depend on the question (for example, whether the links in the answer are valid). You may open <strong>URL ↗</strong> / <strong>Source ↗</strong> to verify.</li>
+            <li><strong>Save &amp; Next</strong> records your answer and loads the next item. Use <strong>Back / Next</strong> to revisit and edit items from this session.</li>
+            <li>You'll annotate up to <strong>100 items</strong>; your progress is shown by the counter at the top right.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Annotate the test pair</div>
+        <div id="metrics"></div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid #f0f0eb;">
+          <button id="save" class="save">Save &amp; Next</button>
+          <div class="status" id="a-status"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- done view -->
+  <section id="view-done" class="done hidden">
+    <h2>You're finished 🎉</h2>
+    <p>Thank you — all your assigned items are complete.</p>
+  </section>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>

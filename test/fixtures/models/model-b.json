@@ -1,0 +1,4 @@
+[
+  { "id": 128, "generated": "B: Contact the registrar for override permission.", "model": "qwen2.5-7B-it", "mode": "sft" },
+  { "id": 201, "generated": "B: It may depend on departmental approval.", "model": "qwen2.5-7B-it", "mode": "sft" }
+]

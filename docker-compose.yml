@@ -1,0 +1,22 @@
+services:
+  app:
+    build:
+      context: .
+      # use host networking during build so the build container can resolve DNS
+      # (registry.npmjs.org). Without this some Docker setups fail with EAI_AGAIN.
+      network: host
+    restart: unless-stopped
+    # Host networking: the app binds host port 80 directly, bypassing the Docker
+    # userland-proxy/bridge (which hangs on some hosts). Serves plain HTTP on the
+    # VM's public IP. No `ports:` mapping is used in host mode.
+    network_mode: host
+    environment:
+      - PROGRESS_KEY=${PROGRESS_KEY}
+      - PORT=80
+    volumes:
+      # DB persists on the host — survives container rebuilds/crashes
+      - /opt/annotator/data:/app/data
+      # seed data (items.json, seeds.json, models/*.json), read-only
+      - ./seed:/app/seed:ro
+      # frontend served live from disk, so design tweaks show on browser refresh
+      - ./public:/app/public:ro

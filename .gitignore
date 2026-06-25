@@ -1,0 +1,25 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Runtime data (SQLite DB lives on the host bind mount, never in git)
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# Env / secrets
+.env
+.env.*
+
+# Claude Code local config
+.claude/settings.local.json
+
+# Local design docs (specs/plans)
+docs/
+
+# Logs
+*.log
+
+# OS
+.DS_Store

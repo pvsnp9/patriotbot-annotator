@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#f4f4f1">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect x="120" y="170" width="600" height="200" rx="20" fill="#ffffff" stroke="#2f6f8f" stroke-width="8"/>
+    <rect x="160" y="210" width="320" height="26" rx="13" fill="#2f6f8f"/>
+    <rect x="160" y="270" width="500" height="18" rx="9" fill="#cdd6da"/>
+    <rect x="160" y="304" width="420" height="18" rx="9" fill="#cdd6da"/>
+    <rect x="760" y="170" width="320" height="460" rx="20" fill="#ffffff" stroke="#2f6f8f" stroke-width="8"/>
+    <rect x="800" y="220" width="160" height="20" rx="10" fill="#3a3a36"/>
+    <rect x="800" y="270" width="240" height="40" rx="8" fill="#eef4f7" stroke="#2f6f8f" stroke-width="3"/>
+    <rect x="800" y="330" width="240" height="40" rx="8" fill="#eef4f7" stroke="#2f6f8f" stroke-width="3"/>
+    <rect x="800" y="560" width="110" height="44" rx="8" fill="#2f6f8f"/>
+    <rect x="930" y="560" width="110" height="44" rx="8" fill="#ffffff" stroke="#c9c9c1" stroke-width="3"/>
+  </svg>
+</template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#f4f4f1;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;color:#1c1c1a;}
+  button{font-family:inherit;}
+</style>
+</helmet>
+<div style="height:100vh;padding:18px 0;overflow:hidden;">
+
+  <div style="width: 90%; max-width: 1480px; margin: 0 auto; position: relative">
+
+    <!-- page caption -->
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px;padding-bottom:9px;border-bottom:1px solid #e0e0da;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3a3a36;">Patriotbot FAQ Annotation</span>
+      <span style="font-size:12px;color:#6b6b64;">First name <span style="color:#c2c2ba;">|</span> email</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px;align-items:stretch;">
+
+      <!-- ========== COLUMN 1 : annotation target + its source ========== -->
+      <div style="display:flex;flex-direction:column;">
+
+        <!-- role label: target -->
+        <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 6px; position: relative">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#2f6f8f;padding:3px 9px;border-radius:5px;">To annotate</span>
+          <span style="font-size:12.5px;color:#6b6b64;">Synthesized FAQ — the question being reviewed</span>
+        <p style="margin:0;margin-left:auto;display:flex;align-items:baseline;gap:1px;font-size:12px;font-weight:600;color:#a4a49c;letter-spacing:.02em;"><span style="font-size:13px;font-weight:700;color:#2f6f8f;">1</span> / 300</p></div>
+
+        <!-- grouped unit: target + candidates + source -->
+        <div style="border:1px solid #dcdcd4;background:#f9f9f6;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:13px;">
+
+        <!-- ----- record card 1 (annotation target, emphasized) ----- -->
+        <div style="background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:15px 20px;display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="display:flex;align-items:center;gap:7px;">
+              <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b6b64;background:#efefea;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;">FAQ</span>
+              <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3f7a52;background:#e6f4ea;border:1px solid #c5e3cf;padding:3px 9px;border-radius:5px;">Test pair to annotate</span>
+            </div>
+            <span style="font-size:12px;color:#a4a49c;font-weight:600;">#67</span>
+          </div>
+
+          <div style="font-size:18px;font-weight:700;line-height:1.4;color:#1a1a17;">If I got a D in my prereq course, do I retake it or can I move on?</div>
+
+          <div style="font-size:15px;line-height:1.65;color:#4a4a44;">You must retake it. A D does not meet the requirement of a C or better for a course used to satisfy a CS prerequisite.</div>
+
+          <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;">
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;">Department</span>
+              <span style="font-size:13px;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;">Computer Science</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;">Persona</span>
+              <span style="font-size:13px;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;">incoming freshman</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;">Intent</span>
+              <span style="font-size:13px;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;">comparison of options</span>
+            </div>
+            <a href="https://cs.gmu.edu/academics/student-resources" target="_blank" rel="noopener" style="margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#33332f;border:1px solid #c9c9c1;padding:7px 15px;border-radius:6px;white-space:nowrap;">URL ↗</a>
+          </div>
+        </div>
+
+        <!-- pick-best row : choose the best answer from candidate options -->
+        <div style="background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:9px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;">Pick the best option below, generated from SFT models</span>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <sc-for list="{{ answerOptions }}" as="opt" hint-placeholder-count="3">
+              <label style="{{ opt.style }}" onClick="{{ opt.onClick }}">
+                <span style="{{ opt.radioStyle }}"><span style="{{ opt.dotStyle }}"></span></span>
+                <span style="font-size:14px;line-height:1.55;color:#33332f;">{{ opt.text }}</span>
+              </label>
+            </sc-for>
+          </div>
+        </div>
+
+        </div>
+        <!-- /grouped unit (target + candidates) -->
+
+        <!-- connector: synthesized-from relationship -->
+        <div style="display:flex;align-items:center;gap:10px;padding:0;margin-left:6px;margin-top:12px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;">Synthesized from</span>
+          <span style="flex:1;height:1px;background:#e3e3dd;"></span>
+          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;background:#ebebe6;padding:3px 9px;border-radius:5px;">Source seed</span>
+        </div>
+
+        <!-- ----- record card 2 (source seed, de-emphasized reference) ----- -->
+        <div style="background:#f7f7f3;border:1px solid #e7e7e1;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8c8c84;background:#ededE7;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;">Source · FAQ</span>
+            <span style="font-size:12px;color:#a4a49c;font-weight:600;">#3</span>
+          </div>
+
+          <div style="font-size:16px;font-weight:700;line-height:1.45;color:#55554e;">If I receive a C- or D in a course intended to satisfy a prerequisite for a CS course, must I retake that course?</div>
+
+          <div style="font-size:14px;line-height:1.65;color:#6b6b64;">Yes. You must retake any course that is intended to satisfy a prerequisite for a CS course if you do not receive a C or better in that course.</div>
+
+          <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;">
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#b0b0a8;font-weight:700;">Department</span>
+              <span style="font-size:13px;color:#6b6b64;background:#efefe9;border:1px solid #e4e4dd;padding:4px 11px;border-radius:999px;">Computer Science</span>
+            </div>
+            <a href="https://cs.gmu.edu/academics/student-resources" target="_blank" rel="noopener" style="margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#6b6b64;border:1px solid #d2d2ca;padding:7px 15px;border-radius:6px;white-space:nowrap;">Source ↗</a>
+          </div>
+        </div>
+
+        <!-- pagination -->
+        <div style="display:flex;gap:10px;margin-top:13px;">
+          <button onClick="{{ onBack }}" style="flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">← Back</button>
+          <button onClick="{{ onNext }}" style="flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">Next →</button>
+        </div>
+
+      </div>
+
+      <!-- ========== COLUMN 2 : annotation panel ========== -->
+      <div style="background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:13px;">
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid #f0f0eb;">
+          <span style="font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3a3a36;">Annotate</span>
+        </div>
+
+        <!-- scale 1 -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <span style="font-size:14px;font-weight:600;color:#2a2a26;">Answer accuracy</span>
+          <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Is the answer factually correct and complete for the question? <strong style="font-weight:600;color:#6b6b64;">1</strong> = wrong or misleading · <strong style="font-weight:600;color:#6b6b64;">5</strong> = fully correct &amp; complete.</span>
+          <div style="display:flex;gap:7px;">
+            <sc-for list="{{ scale1Buttons }}" as="b" hint-placeholder-count="5">
+              <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+            </sc-for>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:#a4a49c;">
+            <span>Low</span><span>High</span>
+          </div>
+        </div>
+
+        <!-- scale 2 -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <span style="font-size:14px;font-weight:600;color:#2a2a26;">Source relevance</span>
+          <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Does the linked source actually support the answer? <strong style="font-weight:600;color:#6b6b64;">1</strong> = unrelated page · <strong style="font-weight:600;color:#6b6b64;">5</strong> = source directly backs the answer.</span>
+          <div style="display:flex;gap:7px;">
+            <sc-for list="{{ scale2Buttons }}" as="b" hint-placeholder-count="5">
+              <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+            </sc-for>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:#a4a49c;">
+            <span>Low</span><span>High</span>
+          </div>
+        </div>
+
+        <!-- metric 3 : valid link (yes/no) -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <span style="font-size:14px;font-weight:600;color:#2a2a26;">Valid Link</span>
+          <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Is the URL a valid GMU (<strong style="font-weight:600;color:#6b6b64;">gmu.edu</strong>) address that currently loads? <strong style="font-weight:600;color:#6b6b64;">Yes</strong> = valid &amp; live · <strong style="font-weight:600;color:#6b6b64;">No</strong> = broken or off-domain.</span>
+          <div style="display:flex;gap:7px;">
+            <sc-for list="{{ linkButtons }}" as="b" hint-placeholder-count="2">
+              <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <!-- group : intent-based yes/no metrics -->
+        <div style="border:1px solid #e7e7e1;background:#faf9f6;border-radius:9px;padding:12px 13px;display:flex;flex-direction:column;gap:11px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;">If intent &nbsp;·&nbsp; Yes / No</span>
+
+          <!-- exact matching -->
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <span style="font-size:14px;font-weight:600;color:#2a2a26;">Exact Matching</span>
+            <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Does the answer exactly match the question's intent? <strong style="font-weight:600;color:#6b6b64;">Yes</strong> = direct match · <strong style="font-weight:600;color:#6b6b64;">No</strong> = partial or off-target.</span>
+            <div style="display:flex;gap:7px;">
+              <sc-for list="{{ exactButtons }}" as="b" hint-placeholder-count="2">
+                <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <!-- risk of harm -->
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <span style="font-size:14px;font-weight:600;color:#2a2a26;">Risk of harm</span>
+            <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Could acting on this response lead to a harmful or undesired outcome? <strong style="font-weight:600;color:#6b6b64;">Yes</strong> = potential harm · <strong style="font-weight:600;color:#6b6b64;">No</strong> = safe to act on.</span>
+            <div style="display:flex;gap:7px;">
+              <sc-for list="{{ harmButtons }}" as="b" hint-placeholder-count="2">
+                <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid #f0f0eb;margin-top:auto;">
+          <div style="display:flex;gap:10px;">
+            <button onClick="{{ onSave }}" style="{{ saveStyle }}">Save</button>
+            <button onClick="{{ onUpdate }}" style="flex:1;padding:11px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">Update</button>
+          </div>
+          <div style="min-height:16px;font-size:12px;font-weight:600;color:#2f6f8f;">{{ status }}</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:620},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2f6f8f&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;scalePoints&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[5,7],&quot;default&quot;:5,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  state = { scale1: null, scale2: null, linkValid: null, exact: null, harmful: null, bestAnswer: null, status: "" };
+
+  answers = [
+    "You must retake it. A D does not meet the requirement of a C or better for a course used to satisfy a CS prerequisite.",
+    "You can move on. A D is a passing grade, so the prerequisite is satisfied and no retake is required.",
+    "It depends on your overall GPA — if it stays above 2.0 you may proceed without retaking the course."
+  ];
+
+  makeAnswerOptions() {
+    const accent = this.props.accent || "#2f6f8f";
+    return this.answers.map((text, i) => {
+      const sel = this.state.bestAnswer === i;
+      return {
+        text,
+        onClick: () => this.setState({ bestAnswer: i, status: "" }),
+        style: {
+          display: "flex",
+          alignItems: "flex-start",
+          gap: "11px",
+          cursor: "pointer",
+          padding: "10px 12px",
+          borderRadius: "8px",
+          border: "1px solid " + (sel ? accent : "#e3e3dd"),
+          background: sel ? "#eef4f7" : "#fafaf7",
+          transition: "background .12s, border-color .12s"
+        },
+        radioStyle: {
+          flexShrink: 0,
+          marginTop: "2px",
+          width: "16px",
+          height: "16px",
+          borderRadius: "50%",
+          border: "2px solid " + (sel ? accent : "#bcbcb4"),
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        },
+        dotStyle: {
+          width: "8px",
+          height: "8px",
+          borderRadius: "50%",
+          background: sel ? accent : "transparent"
+        }
+      };
+    });
+  }
+
+  makeYesNo(key, invert) {
+    const cur = this.state[key];
+    return ["Yes", "No"].map((label) => {
+      const sel = cur === label;
+      const yes = label === "Yes";
+      // default: Yes = good (green). invert: Yes = bad (red).
+      const good = invert ? !yes : yes;
+      const c = good ? "#2f8f5b" : "#b3543f";
+      return {
+        val: label,
+        onClick: () => this.setState({ [key]: label, status: "" }),
+        style: {
+          flex: 1,
+          padding: "11px 0",
+          fontSize: "14px",
+          cursor: "pointer",
+          fontWeight: sel ? "700" : "500",
+          color: sel ? "#fff" : "#4a4a44",
+          background: sel ? c : "#fff",
+          border: "1px solid " + (sel ? c : "#dcdcd5"),
+          borderRadius: "7px",
+          transition: "background .12s, border-color .12s, color .12s"
+        }
+      };
+    });
+  }
+
+  makeButtons(key, points, accent) {
+    const cur = this.state[key];
+    const arr = [];
+    for (let v = 1; v <= points; v++) {
+      const sel = cur === v;
+      arr.push({
+        val: v,
+        onClick: () => this.setState({ [key]: v, status: "" }),
+        style: {
+          flex: 1,
+          padding: "11px 0",
+          fontSize: "15px",
+          cursor: "pointer",
+          fontWeight: sel ? "700" : "500",
+          color: sel ? "#fff" : "#4a4a44",
+          background: sel ? accent : "#fff",
+          border: "1px solid " + (sel ? accent : "#dcdcd5"),
+          borderRadius: "7px",
+          transition: "background .12s, border-color .12s, color .12s"
+        }
+      });
+    }
+    return arr;
+  }
+
+  renderVals() {
+    const accent = this.props.accent || "#2f6f8f";
+    const points = this.props.scalePoints || 5;
+    return {
+      answerOptions: this.makeAnswerOptions(),
+      scale1Buttons: this.makeButtons("scale1", points, accent),
+      scale2Buttons: this.makeButtons("scale2", points, accent),
+      linkButtons: this.makeYesNo("linkValid", false),
+      exactButtons: this.makeYesNo("exact", false),
+      harmButtons: this.makeYesNo("harmful", true),
+      status: this.state.status,
+      saveStyle: {
+        flex: 1,
+        padding: "11px 0",
+        fontSize: "14px",
+        fontWeight: "700",
+        cursor: "pointer",
+        color: "#fff",
+        background: accent,
+        border: "1px solid " + accent,
+        borderRadius: "7px"
+      },
+      onBack: () => this.setState({ status: "" }),
+      onNext: () => this.setState({ status: "" }),
+      onSave: () => this.setState({ status: "✓ Annotation saved" }),
+      onUpdate: () => this.setState({ status: "↻ Annotation updated" })
+    };
+  }
+}
+</script>
+</body>
+</html>

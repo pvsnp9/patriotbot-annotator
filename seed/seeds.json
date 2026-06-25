@@ -1,0 +1,704 @@
+[
+  {
+    "id": 1,
+    "question": "When am I allowed to retake a course for a grade?",
+    "answer": "You may retake a course (unless it’s repeatable for credit, like CS 499) if you want a higher grade. The new grade replaces the old one in your GPA, even if it’s lower. Repeat rules apply to the same course and to courses designated in the catalog as equivalent. Repeat rules apply throughout a student’s academic history. All attempts remain on your transcript. W grades and equivalent transfer courses do not affect your GPA at Mason. Duplicate credit is not given. A grade in a Mason course will not be excluded from the cumulative GPA based on a subsequent taking of an equivalent course at a transfer institution. The exclusion of earlier grades of repeated courses will not change the academic standing or dean’s list notations for the earlier semester. Note that individual programs may disallow students from retaking certain high-demand courses simply for the purpose of improving their grade. The [GMU catalog](https://catalog.gmu.edu/policies/academic/registration-attendance/#text) policy AP.1.3.4 covers repeatability in general.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 2,
+    "question": "Is there a policy on the number of times I can repeat a course?",
+    "answer": "Yes. Students can repeat a CS or SWE class once without departmental approval. Taking the class a third time will require department approval for registration. If you are a computer science major, you should meet with your advisor first before contacting the department to request a third attempt. See also the catalog's policy on [termination from the major (AP.5.2.4)](https://catalog.gmu.edu/policies/academic/undergraduate-policies/) .",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 3,
+    "question": "If I receive a C- or D in a course intended to satisfy a prerequisite for a CS course, must I retake that course?",
+    "answer": "Yes. You must retake any course that is intended to satisfy a prerequisite for a CS course if you do not receive a C or better in that course.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 4,
+    "question": "How do I obtain an \"Incomplete\" if I cannot complete the work for a course?",
+    "answer": "If you know that it will be impossible for you to complete the requirements, you may request the course instructor to give you an Incomplete. The two of you need to have a clear understanding about what you must do to get the Incomplete changed to a letter grade and by what date that material is to be submitted. A written agreement is sometimes used. In any case, the University deadline is the 9th week of the following Spring or Fall semester. Please be aware by university policy, incompletes are given only under extenuating circumstances, and only when a student has performed satisfactorily in the class up to that point.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 5,
+    "question": "What are Academic Action Messages and what do they mean?",
+    "answer": "There are the following Academic Action Messages for Undergraduates: Warning Probation First Suspension Second Suspension Dismissal 13 Credit hour rule For information about what each of these messages mean, see the Registrar's Office information on [Academic Standing](https://registrar.gmu.edu/students/academic-standing/) .",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 6,
+    "question": "Can I change MS programs?",
+    "answer": "Students can apply to change from one MS program to another by submitting a [Graduate Change of Program](https://gmuedu.sharepoint.com/:b:/r/sites/CEC-CS-GRP/Shared%20Documents/Student%20Forms/Graduate%20Forms/Masters%20Forms/Graduate%20Change%20of%20Program.pdf?csf=1&web=1&e=lND9e6) form. The change needs to be approved by the program directors of both the programs and a minimum of 18 credits must be taken after transferring to a new degree program. If both old and new programs are within the CS department, all we need is the form. If you want to change from another department within the College of Engineering and Computing, you will also need to submit a copy of your undergraduate transcript so we can evaluate preparedness. If you want to change to a program outside of the College of Engineering and Computing, you will need to open a new application.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 7,
+    "question": "I was recently admitted to MS CS. Do I have to take CS 530 and CS 531?",
+    "answer": "CS 530 and CS 531 are required by the MS-CS program and students should take them as soon as possible, preferably in their first semester. Students with exceptional undergraduate preparation can request to substitute electives for CS 530 and CS 531 in one of two ways. First, students can file a [Substitution Request for CS 530 and CS 531](https://gmuedu.sharepoint.com/:b:/r/sites/CEC-CS-GRP/Shared%20Documents/Student%20Forms/Graduate%20Forms/Masters%20Forms/Substitution%20Request%20for%20CS%20530%20and%20CS%20531.pdf?csf=1&web=1&e=gP8CHr) . Second, or if the substitution request is denied, students can take a test out exam before beginning the first semester. The exams are given in person only the week before classes start. The schedule will be posted on the department's website. Students who pass the test out exams or whose substitution requests are approved must take other elective courses instead of CS 530 or CS 531.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 8,
+    "question": "I was admitted provisionally. How do I remove my provisional status?",
+    "answer": "To fulfill the provisional requirements of your admission, you must pass your foundation courses with a grade of B or better or pass the corresponding test out exams. Upon doing so, [email us](mailto:csgrad@gmu.edu) to request that your provisional status be removed.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 9,
+    "question": "I don't want to take the foundation courses. How can I skip the requirement?",
+    "answer": "Foundation course requirements are required for students who do not have sufficient background in computing to succeed in our graduate courses. They are there to protect our graduate students and cannot be skipped. If, however, you believe you have taken an equivalent course to any of those required with your provisional admission, you can submit a [Foundation Course Appeal](https://gmuedu.sharepoint.com/:b:/r/sites/CEC-CS-GRP/Shared%20Documents/Student%20Forms/Graduate%20Forms/Masters%20Forms/Foundation%20Course%20Appeal.pdf) . Otherwise, you are required to pass the courses with a B or better or pass the corresponding [test out exams](https://gmuedu.sharepoint.com/:u:/r/sites/CEC-CS-GRP/SitePages/MS-Testout-Exams.aspx) .",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 10,
+    "question": "I’m required to take COMP 502 (formerly INFS 501) as part of my provisional admission, but it is not being offered next semester. What should I do?",
+    "answer": "If COMP 502 is not being offered, you may take MATH 125 Discrete Mathematics in its place to satisfy the provisional admission requirement. Please consult the program director of your MS program before registering for MATH 125.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 11,
+    "question": "I don't satisfy the prerequisite for a class, but I have the background experience. Can I take the class?",
+    "answer": "Generally, no. However, the instructor can grant approval for you to take the class if they determine that your prior academic preparation is sufficient.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 12,
+    "question": "How do I get permission to take an elective course that is not on the pre-approved list for my degree program?",
+    "answer": "You will need to get permission from the [director of your degree program](https://gmuedu.sharepoint.com/:u:/r/sites/CEC-CS-GRP/SitePages/Advising.aspx) (listed under Master's and Graduate Certificate Advising) before taking a course that is not on the list of pre-approved electives.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 13,
+    "question": "I took an undergraduate course that appears to be equivalent to one of the core courses in my MS program. Can I skip the core course?",
+    "answer": "No. Graduate courses cover more material and are more challenging than the corresponding courses at the undergraduate level.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 14,
+    "question": "How can I get a GTA position?",
+    "answer": "[Applications for GTA positions](https://gmuedu.sharepoint.com/:u:/r/sites/CEC-CS-GRP/SitePages/Employment.aspx?csf=1&web=1&e=zrcdFN) will be available each semester through [Handshake](https://gmu.joinhandshake.com/login) . Positions are posted well in advance of the start of each semester.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 15,
+    "question": "How can I get a GRA position?",
+    "answer": "Research assistantships are usually offered by individual faculty and may be offered at any time, not just on semester boundaries. You must already be accepted into a departmental PhD or MS program to apply for an assistantship. If you have a specific topic or area of interest and determine a faculty member who specializes in said area, we recommend establishing a relationship with them (i.e. taking a class) and ask them what funding options they may be able to offer. Never ever spam or otherwise canvas the faculty looking for assistantships. More information can be found [here](https://gmuedu.sharepoint.com/:u:/r/sites/CEC-CS-GRP/SitePages/Employment.aspx?csf=1&web=1&e=4VDKTo) .",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 16,
+    "question": "How do I apply for graduation?",
+    "answer": "Refer to [this page](https://gmuedu.sharepoint.com/sites/CEC-CS-GRP/SitePages/Applying-for-Graduation.aspx) for details on applying for graduation.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 17,
+    "question": "How can I declare a concentration?",
+    "answer": "A concentration is optional and in order to declare one, please complete the \"Change of Program (Graduate)\" form found [here](https://registrar.gmu.edu/forms/) . Fill out the top of the form, list your current concentration as “None”, and then write the concentration you’d like to declare on the \"New Concentration\" line. Please ensure you sign your name on the “student signature” line. The rest of the form can be left blank. Once you’ve filled out your portion, please send it to [csgrad@gmu.edu](mailto:csgrad@gmu.edu) , where it will be processed and then sent to the Registrar’s on your behalf.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 18,
+    "question": "How do I register for the PhD qualifying exam?",
+    "answer": "Send an email to the PhD program administrator at [csphd@gmu.edu](mailto:csphd@gmu.edu) . Be sure to include your name, GMU ID, email address, phone number, subjects you wish to take the exam in, and desired date of the exam within the body of the email.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 19,
+    "question": "What is CS 800?",
+    "answer": "CS 800 is not a course in the traditional sense. Instead, during the course of the semester, students are required to attend a number of departmental colloquia including talks by distinguished speakers, faculty candidates, and GMU faculty.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 20,
+    "question": "The course requirements for the PhD degree include 3 advanced graduate courses. What courses qualify as advanced courses?",
+    "answer": "Typically, 600 level (and above) courses in the CS will qualify as advanced graduate courses. A subset of ISA, INFS and SWE courses also qualify as advanced for the CS PhD program. Refer to the [Academic Catalog](https://catalog.gmu.edu/courses/cs/) for the current list of advanced graduate courses.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 21,
+    "question": "How do I get credit for my previous MS degree?",
+    "answer": "Students will need to complete a Graduate Transfer of Credit Request. The transfer of credit will need to be approved by the director of the PhD program. This request cannot be reviewed prior to admissions, and students must wait until at least their first semester to submit a request.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 22,
+    "question": "What is the maximum time a student can take in the PhD program?",
+    "answer": "The student must be advanced to the PhD candidacy within 6 years. Overall time to graduate cannot exceed 9 years. However, full-time PhD students are usually able to graduate within 4-5 years.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 23,
+    "question": "Upon joining the PhD program, I was assigned an academic advisor. Will that person become my dissertation advisor?",
+    "answer": "No. An academic advisor is assigned to every new student in the program based on the research interests, and s/he provides general advice regarding course selection and the rules of the CS PhD program. When you start doing research and your PhD dissertation area is determined, a faculty member in that area must agree to direct your dissertation, and that faculty member becomes your dissertation director.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 24,
+    "question": "How many credits of CS 896 can I count towards the PhD degree's credit requirements?",
+    "answer": "CS 896 can be repeated up to 18 credits (at most 6 credits can be taken per semester). Students need to first complete the breadth requirement before enrolling in CS 896. Regardless of the number of CS 896 credits earned, the student should still complete CS 600, 700, 701 and 3 advanced graduate courses, as well as required credits for CS 998/999.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 25,
+    "question": "I do not have a previous MS degree, so in addition to the proposal and dissertation (24 credits) and advanced graduate courses (18 credits) I need to take 10 additional graduate level courses (30 credits) courses. What courses should I take? What graduate courses will not count towards the PhD?",
+    "answer": "Generally speaking, if the courses count towards the MS in Computer Science, they can be used to satisfy the 10 additional graduate courses requirement. You can also take graduate courses in other fields, but you should consult your academic advisor and, if necessary, the Program Director to make sure. Though not a strict requirement, before attempting a qualifying exam, many students choose to take the graduate course associated with that specific topic. In general, you should talk to your academic advisor about the course selections. Please be aware that foundation courses offered by the CS department (COMP 501, COMP 502, COMP 503, COMP 511, COMP 512, COMP 513), CS 530, CS 531, and some service courses (CS 504) do not count towards the department's MS programs or the PhD.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 26,
+    "question": "I would like to get a MS degree along the way to my PhD. How can I do that?",
+    "answer": "With careful selection of courses, students may earn an MS degree as part of their PhD studies . CS 600, CS 700 and 9 credits of advanced graduate courses taken as part of the coursework for the PhD degree can be applied towards a MS degree, if the selected courses also satisfy the requirements of the MS degree. The MS degree must be added to a students account at least 1 semester prior to conferral, and cannot be done prior to a student starting their first semester at Mason. Please contact [csphd@gmu.edu](mailto:csphd@gmu.edu) or speak with one of our Graduate Program Specialists for further directions or question.  Like  Save for later",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  },
+  {
+    "id": 27,
+    "question": "How do I schedule an academic advising appointment?",
+    "answer": "Students may schedule academic advising appointments by using [Patriot Connect](https://connect.gmu.edu/) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 28,
+    "question": "Where can I find my program requirements?",
+    "answer": "All program requirements are available in the [university catalog](https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/information-sciences-technology/#programstext) . Students may review their [Student Degree Audit](https://registrar.gmu.edu/topics/degree-audit-student-login/) to help them determine their completed and remaining requirements. *The current catalog year is what automatically populates. Search prior catalog years in the [catalog archives.](https://catalog.gmu.edu/archives/)",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 29,
+    "question": "How do I use the Registration System?",
+    "answer": "Instructions for using the registration system are available in the [Online Registration Guide](https://registrar.gmu.edu/wp-content/uploads/Registration-Instructions.pdf) . Additional registration details are provided by the [Office of the University Registrar](https://registrar.gmu.edu/students/registration/) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 30,
+    "question": "How do I register for a course when I keep getting registration error messages?",
+    "answer": "Course prerequisites and restrictions are published in the [University Catalog](https://ist.gmu.edu/academics/advising/catalog.gmu.edu) . Students who meet the course prerequisite but have a substitution, grade, or waiver for it will need to submit [override request forms](https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/Registration-Override-Request-Form.aspx?csf=1&web=1&e=5yQyS7&CID=1bbe1810-38d7-4a4e-a6fd-72ef0632202b) (one form per course) to register for subsequent courses. Students who do not meet the prerequisites will not be permitted to register. Non-CEC students attempting to register for AIT courses must also submit an override request form. The IST department does not override course capacity. Students may add themselves to an open section, a waitlist (if available) or plan to take the course in a future term.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 31,
+    "question": "Where can I find AIT and IT course syllabi?",
+    "answer": "Syllabi are available for viewing [here](https://canvas.gmu.edu/courses/29825/pages/ay-2024-2025-%7csyllabus%7c-bachelor-of-science-in-information-technology?module_item_id=3880272) . If a course you are interested in is not published here, please contact the faculty course coordinator to request one.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 32,
+    "question": "How do I add a course after the University's last day to add?",
+    "answer": "After the [last day to add](https://registrar.gmu.edu/calendars/) , to add an open course to your schedule, you will need to have a Late Schedule Adjustment request approved. This must be initiated by your academic advisor. Generally speaking, the IST department does not permit LSA . These types of requests are typically for extenuating circumstances only. You will need to send the following information to [BSIT@gmu.edu](mailto:bsit@gmu.edu) (BS INFT students), [MSAIT@gmu.edu](mailto:msait@gmu.edu) (MS AIT students), or [MSINFS@gmu.edu](mailto:MSINFS@gmu.edu) (MS INFS students): Your name Your G# Your email address Course details: course subject and course number (example: IT 104) section (example: DL1) CRN (example: CRN 12345) The reasons you were unable to add the course during the add period The request will then be reviewed by the instructor, the department reviewer, and dean's office. LSA forms will not be processed if the instructor and/or department reviewer do not approve of the request. *Any financial or academic repercussions of the schedule adjustment will be your responsibility. IST-SPECIFIC DEADLINES: Late add requests will not be accepted after close of business (5pm) on the last day of week 2 for that term.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 33,
+    "question": "How do I change my campus (on-ground/Mason OnLine)?",
+    "answer": "Both online and in-person classes offer unique benefits and drawbacks. In-person classes provide a more traditional classroom experience with direct interaction between students and instructors, potentially fostering a stronger sense of community and a more social learning environment. Online courses, on the other hand, offer flexibility and convenience, allowing students to learn more at their own pace and from anywhere with internet access. We recommend communicating with [Housing](https://housing.gmu.edu/about-us/contact-housing) , [Financial Aid](https://www.gmu.edu/financial-aid/contact) , and [Student Accounts](https://studentaccounts.gmu.edu/contact/) to ensure you are aware of the policies that changing your modality may impact. Degree requirements for the [BS INFT MOL](https://masononline.gmu.edu/programs/information-technology-bs/?cmgfrm=www.google.com) are no different than the [on-ground BS INFT](https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/information-sciences-technology/information-technology-bs/) ; however, not all concentration course options are available in an online format (you would still be eligible to register for in-person courses). If you are enrolled in a section reserved for MOL students and you change your modality to become an on-ground student, you will be removed from the MOL-reserved section. Degree requirements for the [MS AIT MOL](https://masononline.gmu.edu/programs/ms-applied-information-technology/) are different than the [on-ground MS AIT](https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/information-sciences-technology/applied-information-technology-ms/) : Students in the on-ground [MS AIT](https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/information-sciences-technology/applied-information-technology-ms/#requirementstext) can register for courses published in the public Schedule of Classes. Courses are offered predominantly in the full term but occasionally in a part of term. Students in the [MS AIT online program](https://masononline.gmu.edu/programs/ms-applied-information-technology/) register for specific MOL courses within the part of terms, which are not published in the public Schedule of Classes. We encourage students consult with the MOL advising team (jmitch30@gmu.edu, ljavorka@gmu.edu) regarding scheduling and credit options/restrictions. Criteria for BS Information Technology students to change from In-Person to MOL : Note: Students in their first semester may request a campus change prior to the end of that term. A campus change to MOL will be considered for IT majors who have completed at least one term as in-person/on-ground if: The student presents a documented, ongoing need that can only be reasonably met through fully online enrollment (e.g., relocation, military deployment, health-related or caregiving responsibilities); The request is not based solely on scheduling convenience or course availability By submitting your request, you certify that all information given is complete, correct, and true and you have read and accept responsibility for the George Mason University Change of Campus request. If you decide to request to change your campus, you will need to submit a [Change of Campus](https://qafederation.ngwebsolutions.com/sp/startSSO.ping?PartnerIdpId=https://shibboleth.gmu.edu/idp/shibboleth&TargetResource=https://dynamicforms.ngwebsolutions.com/Submit/Start/1b2b02a5-f28e-4e32-9725-a9fe0e24bb8e) form, listing the below as advisor: BS INFT students : [bsit@gmu.edu](mailto:bsit@gmu.edu) Change of Campus Request Deadline for Fall : May 08 Change of Campus Request Deadline for Spring : October 16 Change of Campus Request Deadline for Summer : March 30 MS AIT students : [msait@gmu.edu](mailto:msait@gmu.edu) MS INFS students : [msinfs@gmu.edu](mailto:msinfs@gmu.edu)",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 34,
+    "question": "How do I declare/change my concentration?",
+    "answer": "To declare you concentration you must: Catalogs 2015-2016 and before: Please contact [BSIT@gmu.edu](mailto:BSIT@gmu.edu) to request for us to fill out the Change of Program form on your behalf. Catalogs 2016-present: You can officially declare a concentration once you have earned the necessary grade in the required gateway course(s) associated with your desired concentration. Be sure to contact BSIT@gmu.edu, once eligible, letting us know the concentration you wish to declare and we will initiate the Change of Program form on your behalf.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 35,
+    "question": "How do I take a semester or more off?",
+    "answer": "To take a semester or more off, you will need to fill out a [Leave of Absence](https://gmu683-workflow2.elluciancloud.com/webentry/59/LoA) request form for review.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 36,
+    "question": "I am a transfer student and some of my courses are missing from my transcript, what do I do?",
+    "answer": "Use the [Transfer Credit Inquiry Form](https://mymasonportal.gmu.edu/bbcswebdav/xid-174856080_1) if you believe eligible transfer credits are missing from your evaluation. This includes credit by exam such as AP, IB or CLEP. Before submitting this form, be sure you have requested official, final transcripts be sent from the Registrar at your previous institution to Mason’s Office of Admissions, or electronically to ugtrans@gmu.edu, and that you have read and understood the criteria for credit acceptance. Use the [Transfer Credit Re-Evaluation Appeal Form](https://mymasonportal.gmu.edu/bbcswebdav/orgs/AU_Provost_IEM/documents/Transfer_Appeal_Form_Electronic_Dec_2021.pdf) if you were awarded elective credit for a course and wish to have it re-evaluated by the academic unit to transfer in as a specific Mason course. To appeal, please follow these steps: Fill out the first page of the form Send the entire form and any supporting documents, such as syllabi, to the Director of Undergraduate Programs at the academic unit from which you are requesting credit (ex. if you are requesting an IT course, send it to ISTDEPT@gmu.edu, if you are requesting a History course, go to the GMU History Department web page and look up the Director of Undergraduate Programs under “Contact Us”.) The academic department will evaluate the appeal request and make a decision: If the appeal is denied , the academic department will contact you directly. If the appeal is approved , the academic department will send the form to the Office of Admissions Transfer Credit team, and you will be notified when your student record has been updated and is visible in PatriotWeb and your [Mason Degree Audit](https://registrar.gmu.edu/degreeaudit/) . For courses denied any equivalency, including elective credit, contact your advisor to determine if your course meets criteria for a substitution or waiver through the Office of the Registrar. These and other resources are available [here](https://www.gmu.edu/transfer/credits) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 37,
+    "question": "Which English 302 section should I take?",
+    "answer": "IT majors should register for a business, natural sciences/technology, or multidisciplinary section of ENGH 302, as these sections use the most relevant texts. Students may take alternative sections; however, they may find these challenging as the texts will not be relevant to their major.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 38,
+    "question": "I need to take a third or fourth attempt of a course, what do I do?",
+    "answer": "Registration override request details for repeat attempts are available [here](https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/Academics.aspx#registration-overrides) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 39,
+    "question": "How do I obtain permission to take a course at another institution?",
+    "answer": "To request to take a course at another institution, please fill out the [Study Elsewhere](https://qafederation.ngwebsolutions.com/sp/startSSO.ping?PartnerIdpId=https://shibboleth.gmu.edu/idp/shibboleth&TargetResource=https://dynamicforms.ngwebsolutions.com/Submit/Start/af97adc4-42da-4338-9bb0-4cca49754a4e) form at [https://registrar.gmu.edu/forms/](https://registrar.gmu.edu/forms/) . For \"Advisor\" please put the department reviewer email: hakhtari@gmu.edu. Please Note : 1) Courses previously attempted at Mason (including withdrawals), 2) MATH 105, 3) COS courses offered online at Mason, and 4) BUS 498 and any BUS Writing Intensive course cannot be taken elsewhere . Requests also must be pre-approved by the deadlines outlined by the Registrar’s Office. In the past the deadlines have been: August 1st – Fall Semester January 2nd – Spring Semester May 1st – Summer Semester To discuss how NOVA accepts transfer credits, you will need to contact the VCCS advisors. To view how Mason currently accepts transfer credits for the BS INFT, use the [Transfer Credit Matrix](https://transfermatrix.admissions.gmu.edu/) and [credit by exam equivalencies](https://www.gmu.edu/freshman/requirements/exam-credit) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 40,
+    "question": "How do I request a credit overload?",
+    "answer": "IST Academic advisors do not recommend more than 16 credits in a fall/spring semester, nor more than 7 credits at the same time in summers. College of Engineering and Computing (CEC) students requesting an overload of the maximum allowed credits per semester must follow the instructions below: To submit a [Credit Overload request form](https://gmu683-workflow2.elluciancloud.com/webentry/29/student_overload_request) you will need to meet the below criteria: For requests of 19 credits, a student must have at least a 3.0 cumulative GPA. For requests of 20-22 credits, a student must have at least a 3.10 cumulative GPA. Requests for an overload to repeat courses will not be approved. Requests for an overload for students restricted to 13 credits will not be approved. Previous academic performance and credit load will be factored into the decision. **Deadline for submission : Last day to add classes (see GMU [Academic Calendar](https://registrar.gmu.edu/calendars/) ). ***If submitted after the last day to add classes, this request must be accompanied by a [Late Schedule Adjustment](https://registrar.gmu.edu/wp-content/uploads/LSA-Late-Schedule-Adjusment-9.2022.pdf) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 41,
+    "question": "What is the Capstone/Apex Sequence?",
+    "answer": "The [capstone/apex](https://ist.gmu.edu/IT-Capstone-Program) for BS INFT majors is IT 492 and IT 493, a 2-semester course sequence. They are available in a fall-spring or spring-fall sequence . These are not available in summers. Registration details : To register for IT 492, students must have a minimum of 90 credits graded and be classified as a Senior or Senior-Plus. Preemptive registration is not permitted. Pre and co-requisites for IT 492 are published in the [University catalog](https://catalog.gmu.edu/search/?scontext=all&search=IT+492) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 42,
+    "question": "What is CPT? How can I make CPT requests?",
+    "answer": "Curricular Practical Training (CPT) is a type of work authorization that allows international students (F-1 visa) to engage in temporary, paid or unpaid, employment related to their major while pursuing their degree. Undergraduate students interested in CPT should be sure to review all details on [OIPS' website](https://oips.gmu.edu/cpt/) . ECE oversees the CPT course for CEC students: ENGR 395. Email [ece@gmu.edu](mailto:ece@gmu.edu) to dicuss the process for enrolment. You will need faculty from IST to be your faculty advisor and be willing to supervise your work and enter a grade once the semester is over. Academic advisors cannot act in this role. A [list of potential faculty](https://ist.gmu.edu/people/faculty/faculty-coordinators) are available.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 43,
+    "question": "How do I declare/change my concentration?",
+    "answer": "To declare/change a concentration, please email msait@gmu.edu (MS AIT) or msinfs@gmu.edu (MS ISYS/INFS) requesting for an advisor process the electronic form on your behalf.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 44,
+    "question": "How do I take a semester or more off?",
+    "answer": "[AP.6.4.5 Graduate Student Parental Leave of Absence](https://catalog.gmu.edu/policies/academic/graduate-policies/#ap-6-4-5) [AP.6.4.6 Graduate Student General Leave of Absence](https://catalog.gmu.edu/policies/academic/graduate-policies/#ap-6-4-6) [AP.6.4.7 Graduate Student Medical Leave of Absence](https://catalog.gmu.edu/policies/academic/graduate-policies/#ap-6-4-7)",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 45,
+    "question": "How do I withdraw from the MS?",
+    "answer": "Students who wish to withdraw from their MS should review [AP.6.4.4 Voluntary Resignation from Graduate Academic Program](https://catalog.gmu.edu/policies/academic/graduate-policies/#ap-6-4-4) and submit the [Voluntary Resignation from Graduate Academic Program](https://shibboleth.gmu.edu/idp/profile/SAML2/POST/SSO?execution=e1s1) to msait@gmu.edu (MS AIT, CERG ACBS, CERG ISCI) or msinfs@gmu.edu (MS ISYS/INFS) for review. AP.6.4.4 Voluntary Resignation from Graduate Academic Program Degree-seeking students may officially resign from an academic program with the approval of their department chair or program director and the dean or director of the school, college, or institute. The Voluntary Resignation [form](https://registrar.gmu.edu/forms/graduate/) must then be submitted to the Office of the University Registrar for transcript notation. Students who resign after the drop period may either complete the courses they are currently enrolled in or immediately withdraw, which will result in grades of W on the student's transcript for that semester. All students that have resigned will be removed from any future registered courses. Program resignation is final.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 46,
+    "question": "Who can sign my OPT/CPT request?",
+    "answer": "Be sure to review the various details regarding [OPT](https://oips.gmu.edu/opt/) and [CPT](https://oips.gmu.edu/cpt/) . Students are not assigned to one specific advisor; rather, you may select any of the [IST Academic Advising team](https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/Advising.aspx#academic-advisors) to obtain signatures.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 47,
+    "question": "How Do I Request a Credit Overload?",
+    "answer": "IST academic advisors do not recommend more than 9 credits in a single term for graduate students; however, graduate students may register for up to 12 credits. If additional credits are desired, you will need to submit a [Credit Overload request form](https://gmu683-workflow2.elluciancloud.com/webentry/29/student_overload_request) .",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 48,
+    "question": "How do I obtain a Prerequisite Override for an AIT course?",
+    "answer": "Step 1 : Student contacts AIT instructor for their approval to register for the course with a prerequisite exception. If no instructor is listed, student will need to wait until one is published. Step 2 : If the instructor approves, they need to email MSAIT@gmu.edu, cc’ing the director at [Zyan4@gmu.edu](mailto:Zyan4@gmu.edu) with notification of approval. Step 3 : The graduate advising team will then submit a registration override and notify the student with registration instructions.",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 89,
+    "question": "Who do I contact with questions about the exceptions or the workflow functionality?",
+    "answer": "Please send your questions to the OUR at: .",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/topics/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 90,
+    "question": "How long with the exception workflow process take?",
+    "answer": ", The submitted or approved requests will appear in an approvers queue in real time. The approval processing time will depend on how quickly Level 1, Level 2, and OUR approvers take to review and approve the request. We anticipate that the processing time will be much faster than the previous PDF process.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/topics/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 91,
+    "question": "What happens if an exception request is denied?",
+    "answer": ", The request will not move forward in the workflow and will not appear as completed in the audit. Once the student’s audit refreshes, the denied exception request will disappear from the audit. All denied requests will still be visible in the student’s Requests tab. Within the Requests tab you can click on the denied request […]",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/topics/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 92,
+    "question": "What should an advisor do if they submitted a request by mistake, or realize the request needs to be edited after submitting?",
+    "answer": ", Navigate to your “Requests” tab, select the specific exception request. The pending request will open. Select “Cancel Request”. You will now be able to make changes and resubmit. Note: If you need to change a submitted request, you will need to cancel and start over.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/topics/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 93,
+    "question": "Is it possible to initiate exception requests in a batch?",
+    "answer": "No, exceptions must be submitted individually. If a department has a frequent need for batch exceptions, the OUR recommends reviewing the curriculum and submitting updates to the University Catalog as necessary. Retroactive requirement updates allow the department to make certain curriculum changes to older catalog years, which can alleviate the need for batch exceptions in […]",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/topics/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 94,
+    "question": "Can advisors submit exception requests for Milestones in the degree audit?",
+    "answer": ", No. The OUR Degree Compliance team will process Milestones during degree conferral review. Milestones are indicated in the degree audit with a flag symbol.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/topics/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 95,
+    "question": "Who can register for classes at Mason?",
+    "answer": "Undergraduate and Graduate Students [Non-degree Students](https://www2.gmu.edu/admissions-aid/how-apply/non-degree) [Mason Employees](http://registrar.gmu.edu/topics/mason-employee-registration/) [Senior Citizens](http://registrar.gmu.edu/topics/senior-citizen-waiver-program/) All students must have a student record free of financial and administrative holds to be eligible to register. Students are strongly encouraged to consult with an advisor before registering for classes. Undergraduates may locate their academic advisor on the undergraduate [Advising Home Page](https://advising.gmu.edu/) .",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/registration/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 96,
+    "question": "Should advisors enter internal notes and add supporting documentation to exception requests?",
+    "answer": ", There are a few options for adding notes when submitting an exception request. A justification field is required as part of the exception request. It provides space for advisors to add a description of their request. The justification text should be brief and is used to describe the exception. Internal notes are optional, and provide […]",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/ufaq-category/degreeauditfaq/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 97,
+    "question": "Why am I being charged out of state tuition?",
+    "answer": "You will be charged the out-of-state tuition rate if admissions classified you as out-of-state, or you did not complete the Application for In-State Rates when you applied to Mason.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 98,
+    "question": "Who can apply for reclassification?",
+    "answer": "All current continuing students or newly admitted students who have indicated their intent to enroll may appeal.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 99,
+    "question": "Are there exceptions for active duty, military, veterans, or their families?",
+    "answer": "Yes. See the [Active Duty, Veterans and Military](https://registrar.gmu.edu/students/domicile/military-specific-domicile-information/) page for more information. Contact the [Office of Military Services](http://military.gmu.edu) for information regarding other veteran benefits or the veteran certification process.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 100,
+    "question": "Can I have my classification changed for previous semesters?",
+    "answer": "Mason cannot accept appeals for previous terms.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 101,
+    "question": "I filed an appeal and my tuition is due – do I have to pay?",
+    "answer": "Yes. Filing a domicile appeal does not remove your obligation to pay your tuition, and meeting all payment deadlines.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 102,
+    "question": "If my appeal is granted, can I get a refund?",
+    "answer": "Yes. If your appeal is granted, you may request a refund for the difference between the in-state and out-of-state rates, or apply the credit balance to the next semester.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 103,
+    "question": "Can changing my domicile effect my financial aid award?",
+    "answer": "Yes. A change in residency can result in an adjustment or cancellation of your Financial Aid Award. Contact the [The Office of Student Financial Aid](https://www2.gmu.edu/admissions-aid/financial-aid) with any aid related questions.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 104,
+    "question": "Who can be considered a “legal guardian”?",
+    "answer": "A legal guardianship can only be created by court order. Living with a relative other than your parents who supports you, or a power of attorney does not create a guardianship.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 105,
+    "question": "I transferred from another Virginia school, where I was in-state. Why am I classified as out-of-state at Mason?",
+    "answer": "Admissions makes all initial decisions based on the information in your Application for In-State Rates. If you do not agree with Admissions decision, you can submit an appeal.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 106,
+    "question": "I’m an F-1 student. Can I qualify for in-state tuition?",
+    "answer": "No. F-1 students are not eligible to establish domicile. For more information regarding what status’ are eligible and which are not see SCHEV’s [Addendum A – Descriptions and Domicile Eligibility Status for Various Categories of Aliens](https://www.schev.edu/financial-aid/in-state-residency/guidelines-for-in-state-residency-tuition)",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 107,
+    "question": "One of my parents lives in Virginia, but the other does not. Can I qualify for in-state tuition?",
+    "answer": "Maybe. The domicile of a dependent student may be either the domicile of the parent with whom he resides, the parent who claims the student as a dependent for federal or Virginia income tax purposes, or the parent who provides the student substantial financial support. If you submit an appeal, provide information regarding the parent that resides in Virginia.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 108,
+    "question": "I’m currently classified as in-state. Can my classification change to out-of-state?",
+    "answer": "Yes. Changes in your domicile, immigration status, or your parents domicile (if you are a dependent student) can result in a change in your classification.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 109,
+    "question": "What is the difference between a dependent and an independent student?",
+    "answer": "A student is a dependent if they are listed as a dependent on their parent(s), or legal guardians tax returns, or they receives substantial financial support (more than 50%) from them. A married student whose spouse provides substantial financial support also can be a dependent student. A student under the age of 24 on the first day of the semester or term is presumed to dependent unless the student meets one of the exceptions listed in the Virginia Code. An “Independent student” means one whose parents have surrendered the right to his care, custody and earnings, do not claim them as a dependent on federal or state income tax returns, and have ceased to provide them substantial financial support.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 110,
+    "question": "How will I receive my decision?",
+    "answer": "All communications, including decisions, will be sent to your Mason email account, so please check it regularly.",
+    "department": "University Registrar",
+    "page_type": "FAQ",
+    "url": "https://registrar.gmu.edu/students/domicile/domicile-frequently-asked-questions/",
+    "source": "https://registrar.gmu.edu/"
+  },
+  {
+    "id": 116,
+    "question": "Who do I talk to?",
+    "answer": "The college advises students through its various departments and programs. Undergraduate students can find their advisor through the provided [list](https://science.gmu.edu/academics/advising-student-support/advising) , however graduate students should reach out to the Graduate Programs Director in the Office of Academic Affairs.",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  },
+  {
+    "id": 117,
+    "question": "How do I check my degree progress?",
+    "answer": "Degree evaluations are made available for students and provide a mechanism to check on how progression is being made towards degree completion. Note that solely checking degree evaluations should not replace face-to-face advising. For students who have a catalog year of [Fall 2012 or later](http://registrar.gmu.edu/students/degree-evaluation/degree-works/) View the tutorial on [how to use DegreeWorks](https://www.youtube.com/watch?v=3OiIC7h9lfA) , the degree evaluation system used by undergraduate students with a catalog year of Fall 2012 or later. For students who have a catalog year [prior to Fall 2012](http://registrar.gmu.edu/students/degree-evaluation/capp/)",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  },
+  {
+    "id": 118,
+    "question": "Do I have to listen to what my advisor says?",
+    "answer": "Advisors can give advice based on their experience. However, the final decision and responsibility for class choices ultimately falls to the student.",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  },
+  {
+    "id": 119,
+    "question": "How do I withdraw from a class?",
+    "answer": "Non-academic withdrawals refer to students who need to withdraw from coursework due to a non-academic situation (medical/family emergency, military deployment, etc.). Students seeking a withdrawal from coursework prior to the published last day to drop deadline, can do so themselves via [PatriotWeb](http://patriotweb.gmu.edu/) . Non-academic withdrawals after the published deadline requires an additional [form](https://science.gmu.edu/academics/advising-student-support/policies-and-procedures/non-academic-withdrawals) and must receive approval from the Office of Undergraduate Academic Affairs.",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  },
+  {
+    "id": 120,
+    "question": "How do I drop a class?",
+    "answer": "Students must manually drop a class through [Patriot Web](https://patriotweb.gmu.edu/) . Do not assume you will automatically removed from a class if you do not attend. [Academic Policy AP.1.3 states:](https://catalog.gmu.edu/policies/academic/registration-attendance/#text) Students are responsible for registering properly and paying by the deadline. Students should confirm the correctness of their enrollments (including drop and add) via Patriot Web. Incorrect enrollments may result in academic and financial penalties. With a few exceptions, unless your academic standing changes, we will not remove you from a course you have registered for.",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  },
+  {
+    "id": 121,
+    "question": "Do family members have access to my academic information?",
+    "answer": "The staff in the Office of Undergraduate Academic Affairs is always willing to answer and speak to anything in a general fashion. Due to the Family Education Rights and Privacy Act ( [FERPA](https://registrar.gmu.edu/ferpa/) ), we are limited to the amount of information which we can share regarding a student’s private PatriotWeb record. If you are seeking to sit in on a meeting with your student, consent from the student must be provided on a [FERPA waiver](https://qafederation.ngwebsolutions.com/sp/startSSO.ping?PartnerIdpId=https://shibboleth.gmu.edu/idp/shibboleth&TargetResource=https://dynamicforms.ngwebsolutions.com/ShowForm.aspx?RequestedDynamicFormTemplate=13626dde-2fab-4b6e-8933-4b4c5364131d) form.",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  },
+  {
+    "id": 122,
+    "question": "Can I transfer credits from another institution?",
+    "answer": "Students are welcome to take a course away from Mason for credit and have those count towards their degree requirements. The grade for the course, however, will not come back to Mason. Students who transferred in more than 60 or more credits may not take a course elsewhere once they have begun matriculating at Mason. Mason Science students are limited to 9 total credits away from Mason. Learn more about this option [here](https://science.gmu.edu/academics/advising-student-support/policies-and-procedures/course-elsewhere) .",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  },
+  {
+    "id": 123,
+    "question": "How long does it take for requests to be processed?",
+    "answer": "Our goal is to have requests reviewed within 2-3 business days. For fairness, we review requests in the order which they were received. Certain times during the semester, we have an especially heightened number of requests (especially the beginning and end of the semester) and requests may take the slightest bit longer. This office will be in touch with the student via their masonlive.gmu.edu email address after the request has been either approved or denied.",
+    "department": "College of Science",
+    "page_type": "FAQ",
+    "url": "https://cos.gmu.edu/uaa/advising/",
+    "source": "https://cos.gmu.edu/"
+  }
+]

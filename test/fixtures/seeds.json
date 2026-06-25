@@ -1,0 +1,20 @@
+[
+  {
+    "id": 38,
+    "question": "I need to take a third or fourth attempt of a course, what do I do?",
+    "answer": "Registration override request details for repeat attempts are available [here](https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/Academics.aspx#registration-overrides).",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/"
+  },
+  {
+    "id": 12,
+    "question": "Am I eligible to graduate with a 1.9 GPA?",
+    "answer": "No. A minimum 2.0 GPA is required to graduate.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/"
+  }
+]

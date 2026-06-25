@@ -1,0 +1,28 @@
+[
+  {
+    "id": 128,
+    "question": "I got an override error when trying to re-enroll in a course—where should I go?",
+    "answer": "Registration override request details for repeat attempts can be found [here](https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/Academics.aspx#registration-overrides).",
+    "department": "Information Sciences and Technology",
+    "page_type": "FAQ",
+    "url": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/SitePages/FAQs.aspx",
+    "source": "https://gmuedu.sharepoint.com/sites/CECISTDepartment-GRP/",
+    "source_seed_id": "38",
+    "persona": "prospective applicant",
+    "intent": "troubleshooting an error",
+    "max_cos_sim": 0.8293
+  },
+  {
+    "id": 201,
+    "question": "Can I graduate if my GPA is 1.9?",
+    "answer": "No. You must have at least a 2.0 cumulative GPA to be eligible to graduate.",
+    "department": "Computer Science",
+    "page_type": "FAQ",
+    "url": "https://cs.gmu.edu/academics/student-resources",
+    "source": "https://cs.gmu.edu/",
+    "source_seed_id": "12",
+    "persona": "incoming freshman",
+    "intent": "yes/no eligibility",
+    "max_cos_sim": 0.77
+  }
+]

@@ -1,0 +1,4 @@
+[
+  { "id": 128, "generated": "A: Submit a registration override request on the IST FAQ page.", "model": "gemma-4-12B-it", "mode": "sft" },
+  { "id": 201, "generated": "A: No, a 2.0 cumulative GPA is required to graduate.", "model": "gemma-4-12B-it", "mode": "sft" }
+]
