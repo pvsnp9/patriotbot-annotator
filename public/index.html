@@ -6,7 +6,7 @@
 <title>Patriotbot FAQ Annotation</title>
 <style>
   *{box-sizing:border-box;} html,body{margin:0;padding:0;}
-  body{background:#f4f4f1;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1c1c1a;}
+  body{background:#f4f4f1;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;color:#1c1c1a;}
   button{font-family:inherit;}
   .wrap{width:90%;max-width:1480px;margin:0 auto;padding:18px 0;}
   .cap{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px;padding-bottom:9px;border-bottom:1px solid #e0e0da;}
@@ -26,54 +26,93 @@
   .agree{display:flex;gap:9px;align-items:flex-start;margin:16px 0 0;font-size:13px;color:#33332f;}
   .exit{font-size:12px;font-weight:600;color:#6b6b64;background:#fff;border:1px solid #d2d2ca;border-radius:6px;padding:5px 12px;cursor:pointer;}
   .exit:hover{background:#f5f5f1;}
-  /* annotate */
+  .save{padding:11px 0;font-size:14px;font-weight:700;cursor:pointer;color:#fff;background:#2f6f8f;border:1px solid #2f6f8f;border-radius:7px;}
+  .save:disabled{opacity:.5;cursor:default;}
+  .status{min-height:16px;font-size:12px;font-weight:600;color:#2f6f8f;}
+
+  /* ===== annotate view ===== */
   .grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px;align-items:start;}
-  .rolebar{display:flex;align-items:center;gap:9px;margin-bottom:6px;}
+  .col-left{display:flex;flex-direction:column;}
+  .col-right{display:flex;flex-direction:column;gap:10px;}
+
+  .rolebar{display:flex;align-items:center;gap:9px;margin-bottom:4px;}
   .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#2f6f8f;padding:3px 9px;border-radius:5px;}
-  .counter{margin-left:auto;font-size:12px;font-weight:600;color:#a4a49c;}
-  .counter b{font-size:13px;color:#2f6f8f;}
-  .group{border:1px solid #dcdcd4;background:#f9f9f6;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:13px;}
-  .card{background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:15px 20px;display:flex;flex-direction:column;gap:6px;}
-  .card.src{background:#f7f7f3;border:1px solid #e7e7e1;box-shadow:none;}
-  .badge{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b6b64;background:#efefea;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;}
-  .badge.green{color:#3f7a52;background:#e6f4ea;border-color:#c5e3cf;}
-  .q{font-size:18px;font-weight:700;line-height:1.4;color:#1a1a17;} .src .q{font-size:16px;color:#55554e;}
-  .ans{font-size:15px;line-height:1.65;color:#4a4a44;} .src .ans{font-size:14px;color:#6b6b64;}
-  .chips{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;}
-  .chips > div{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;}
-  .chip-l{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;line-height:1;}
-  .chip{display:inline-block;font-size:13px;line-height:1.3;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;}
-  .link{margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#33332f;border:1px solid #c9c9c1;padding:7px 15px;border-radius:6px;white-space:nowrap;}
-  .pick{background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:9px;}
-  .pick-h{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;}
-  .opt{display:flex;align-items:flex-start;gap:11px;cursor:pointer;padding:10px 12px;border-radius:8px;border:1px solid #e3e3dd;background:#fafaf7;transition:background .12s,border-color .12s;}
+  .counter{margin-left:auto;display:flex;align-items:baseline;gap:1px;font-size:12px;font-weight:600;color:#a4a49c;letter-spacing:.02em;}
+  .counter b{font-size:13px;font-weight:700;color:#2f6f8f;}
+
+  /* FAQ question : the hero card */
+  .qcard{border:1.5px solid #2f6f8f;background:#eef4f7;box-shadow:0 0 0 3px #eef4f7;border-radius:12px;padding:10px 20px 11px;}
+  .qhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;}
+  .qbadge{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#2f6f8f;padding:3px 9px;border-radius:5px;}
+  .qid{font-size:12px;color:#7e9aa6;font-weight:600;}
+  .qtext{font-size:18px;font-weight:700;line-height:1.26;color:#173947;letter-spacing:-.01em;text-wrap:pretty;}
+  .qtext a{color:#2f6f8f;}
+  .qchips{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px;}
+  .pill{font-size:12px;color:#33332f;background:#fff;border:1px solid #cddde3;padding:4px 11px;border-radius:999px;}
+  .pill-l{color:#7e9aa6;font-weight:600;}
+  .qurl{margin-left:auto;font-size:12px;font-weight:600;text-decoration:none;color:#2f6f8f;border:1px solid #cddde3;background:#fff;padding:5px 13px;border-radius:6px;white-space:nowrap;}
+
+  /* candidate options */
+  .optcard{background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:10px 18px;margin-top:9px;display:flex;flex-direction:column;gap:7px;}
+  .optcard-h{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;}
+  #options{display:flex;flex-direction:column;gap:6px;}
+  .opt{display:flex;align-items:flex-start;gap:11px;cursor:pointer;padding:5px 12px;border-radius:8px;border:1px solid #e3e3dd;background:#fafaf7;transition:background .12s,border-color .12s;}
   .opt.sel{border-color:#2f6f8f;background:#eef4f7;}
   .radio{flex-shrink:0;margin-top:2px;width:16px;height:16px;border-radius:50%;border:2px solid #bcbcb4;display:flex;align-items:center;justify-content:center;}
   .opt.sel .radio{border-color:#2f6f8f;}
   .dot{width:8px;height:8px;border-radius:50%;background:transparent;}
   .opt.sel .dot{background:#2f6f8f;}
-  .opt .text{font-size:14px;line-height:1.55;color:#33332f;}
-  .connector{display:flex;align-items:center;gap:10px;margin:12px 0 0 6px;}
-  .connector .lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;}
-  .connector .rule{flex:1;height:1px;background:#e3e3dd;}
-  .pager{display:flex;gap:10px;margin-top:13px;}
-  .pager button{flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;}
-  .pager button:disabled{opacity:.45;cursor:default;}
-  .hint{margin-top:13px;background:#fbfbf8;border:1px solid #e7e7e1;border-radius:9px;padding:12px 14px;color:#6b6b64;}
-  .hint b{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9a9a92;margin-bottom:7px;}
-  .hint ol{margin:0;padding-left:18px;font-size:12.5px;line-height:1.65;}
-  .hint li{margin:4px 0;} .hint strong{color:#4a4a44;}
-  .pager button:disabled{opacity:.45;cursor:default;}
-  .panel{background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:13px;}
-  .panel-h{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3a3a36;padding-bottom:10px;border-bottom:1px solid #f0f0eb;}
-  .metric .title{font-size:14px;font-weight:600;color:#2a2a26;display:block;}
-  .metric .help{font-size:12px;line-height:1.5;color:#8c8c84;display:block;margin:4px 0 6px;}
-  .opts{display:flex;gap:7px;}
-  .opts button{flex:1;padding:11px 0;font-size:15px;cursor:pointer;color:#4a4a44;background:#fff;border:1px solid #dcdcd5;border-radius:7px;}
-  .opts button.sel{color:#fff;font-weight:700;}
-  .save{padding:11px 0;font-size:14px;font-weight:700;cursor:pointer;color:#fff;background:#2f6f8f;border:1px solid #2f6f8f;border-radius:7px;}
-  .save:disabled{opacity:.5;cursor:default;}
-  .status{min-height:16px;font-size:12px;font-weight:600;color:#2f6f8f;}
+  .opt .text{font-size:13.5px;line-height:1.4;color:#33332f;}
+  .opt .text a{color:#2f6f8f;}
+
+  /* annotation panel */
+  .apanel{background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:10px 16px;margin-top:7px;display:flex;flex-direction:column;gap:7px;}
+  .apanel-top{display:flex;flex-direction:column;gap:7px;padding-bottom:8px;border-bottom:1px solid #f0f0eb;}
+  .apanel-h{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#3a3a36;}
+  .aquote{font-size:13.5px;line-height:1.45;color:#33332f;background:#faf9f6;border:1px solid #e7e7e1;border-left:3px solid #2f6f8f;border-radius:0 8px 8px 0;padding:8px 12px;}
+  .aquote a{color:#2f6f8f;}
+
+  .m-grid{display:grid;gap:18px;}
+  .metric{display:flex;flex-direction:column;gap:5px;}
+  .m-title{font-size:14px;font-weight:600;color:#2a2a26;}
+  .m-help{font-size:11px;line-height:1.4;color:#8c8c84;}
+  .m-help strong{font-weight:600;color:#6b6b64;}
+  .m-btns{display:flex;gap:6px;margin-top:auto;}
+  .m-btns button{flex:1;padding:6px 0;font-size:15px;cursor:pointer;font-weight:500;color:#4a4a44;background:#fff;border:1px solid #dcdcd5;border-radius:7px;transition:background .12s,border-color .12s,color .12s;}
+  .m-ends{display:flex;justify-content:space-between;font-size:10px;color:#a4a49c;}
+  .yn-group{border:1px solid #e7e7e1;background:#faf9f6;border-radius:9px;padding:9px 12px;display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+  .yn-group-h{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;}
+  .yn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+  .afoot{display:flex;flex-direction:column;gap:7px;padding-top:8px;border-top:1px solid #f0f0eb;}
+  .afoot-row{display:flex;gap:10px;}
+  .abtn{flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;}
+  .abtn:disabled{opacity:.45;cursor:default;}
+  .asave{flex:1;padding:8px 0;font-size:14px;font-weight:700;cursor:pointer;color:#fff;background:#2f6f8f;border:1px solid #2f6f8f;border-radius:7px;}
+  .asave:disabled{opacity:.5;cursor:default;}
+  .astatus{min-height:14px;font-size:12px;font-weight:600;color:#2f6f8f;}
+
+  /* right column : reference source + how-to */
+  .refcon{display:flex;align-items:center;gap:10px;margin:12px 0 0 6px;}
+  .refcon-l{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;}
+  .refcon-rule{flex:1;height:1px;background:#e3e3dd;}
+  .srccard{background:#f7f7f3;border:1px solid #e7e7e1;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:8px;}
+  .src-head{display:flex;align-items:center;justify-content:space-between;}
+  .src-badge{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8c8c84;background:#ededE7;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;}
+  .src-id{font-size:12px;color:#a4a49c;font-weight:600;}
+  .src-q{font-size:16px;font-weight:700;line-height:1.45;color:#55554e;}
+  .src-q a,.src-a a{color:#557;}
+  .src-a{font-size:14px;line-height:1.65;color:#6b6b64;}
+  .src-foot{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;}
+  .src-dept{display:flex;flex-direction:column;gap:4px;}
+  .src-dept-l{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#b0b0a8;font-weight:700;}
+  .src-dept-v{font-size:13px;color:#6b6b64;background:#efefe9;border:1px solid #e4e4dd;padding:4px 11px;border-radius:999px;}
+  .src-link{margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#6b6b64;border:1px solid #d2d2ca;padding:7px 15px;border-radius:6px;white-space:nowrap;}
+  .howto{background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:14px 18px;margin-top:6px;display:flex;flex-direction:column;gap:10px;}
+  .howto-h{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;}
+  .howto ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.55;color:#4a4a44;}
+  .howto strong{font-weight:600;color:#33332f;}
+
   .done{max-width:520px;margin:12vh auto;text-align:center;}
 </style>
 </head>
@@ -111,49 +150,63 @@
 
   <!-- annotate view -->
   <section id="view-annotate" class="hidden">
-    <div class="rolebar">
-      <span class="tag">To annotate</span>
-      <span style="font-size:12.5px;color:#6b6b64;">Synthesized FAQ — pick the best generated answer &amp; rate the pair</span>
-      <span class="counter"><b id="ct-done">0</b> / 100</span>
-    </div>
     <div class="grid">
-      <div>
-        <div class="group">
-          <div class="card" id="item-card"></div>
-          <div class="pick">
-            <span class="pick-h">Pick the option that best answers the question above &mdash; all generated by SFT models</span>
-            <div id="options"></div>
+
+      <!-- ===== COLUMN 1 : annotation target ===== -->
+      <div class="col-left">
+        <div class="rolebar">
+          <span class="tag">To annotate</span>
+          <p class="counter" style="margin:0;"><b id="ct-done">0</b>&nbsp;/ 100</p>
+        </div>
+
+        <!-- FAQ question (question + metadata only) -->
+        <div class="qcard" id="item-card"></div>
+
+        <!-- candidate options -->
+        <div class="optcard">
+          <span class="optcard-h">For the question above, pick the best answer generated from SFT models</span>
+          <div id="options"></div>
+        </div>
+
+        <!-- annotation panel -->
+        <div class="apanel">
+          <div class="apanel-top">
+            <span class="apanel-h">For the question above, read the answer item below and annotate.</span>
+            <div class="aquote" id="answer-quote"></div>
+          </div>
+          <div id="metrics"></div>
+          <div class="afoot">
+            <div class="afoot-row">
+              <button id="back" class="abtn" disabled>&larr; Back</button>
+              <button id="save" class="asave">Save</button>
+              <button id="next" class="abtn">Next &rarr;</button>
+            </div>
+            <span class="astatus" id="a-status"></span>
           </div>
         </div>
-        <div class="connector">
-          <span class="lbl">Synthesized from</span><span class="rule"></span>
-          <span class="lbl" style="background:#ebebe6;padding:3px 9px;border-radius:5px;">Source seed</span>
+      </div>
+
+      <!-- ===== COLUMN 2 : reference source FAQ ===== -->
+      <div class="col-right">
+        <div class="refcon">
+          <span class="refcon-l">For reference &mdash; the actual Q&amp;A from GMU</span>
+          <span class="refcon-rule"></span>
         </div>
-        <div class="card src" id="seed-card" style="margin-top:10px;"></div>
-        <div class="pager">
-          <button id="back" disabled>← Back</button>
-          <button id="next" disabled>Next →</button>
-        </div>
-        <div class="hint">
-          <b>How to annotate</b>
+
+        <div class="srccard" id="seed-card"></div>
+
+        <div class="howto">
+          <span class="howto-h">How to annotate</span>
           <ol>
-            <li>Read the question and its answer in the top card.</li>
-            <li>Use the <strong>Source · FAQ</strong> card at the bottom — the original FAQ this item was synthesized from — as your reference when judging accuracy.</li>
-            <li>Pick the <strong>single best</strong> answer from the options — the model names are hidden on purpose.</li>
-            <li>Rate the test pair using the panel on the right; the fields shown depend on the question (for example, whether the links in the answer are valid). You may open <strong>URL ↗</strong> / <strong>Source ↗</strong> to verify.</li>
-            <li><strong>Save &amp; Next</strong> records your answer and loads the next item. Use <strong>Back / Next</strong> to revisit and edit items from this session.</li>
-            <li>You'll annotate up to <strong>100 items</strong>; your progress is shown by the counter at the top right.</li>
+            <li>Pick the single best answer from the candidates &mdash; they're model-generated and shown blind.</li>
+            <li>Rate <strong>accuracy</strong> (is it factually correct) and <strong>source relevance</strong> (does the cited source support it) on 1&ndash;5.</li>
+            <li>Answer any <strong>Yes / No</strong> checks shown &mdash; valid link, exact match, or risk of harm.</li>
+            <li>You may use the reference Q&amp;A to check the answer's originality and accuracy.</li>
+            <li><strong>Save</strong> activates once every field is answered; then click <strong>Next</strong>.</li>
           </ol>
         </div>
       </div>
-      <div class="panel">
-        <div class="panel-h">Annotate the test pair</div>
-        <div id="metrics"></div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid #f0f0eb;">
-          <button id="save" class="save">Save &amp; Next</button>
-          <div class="status" id="a-status"></div>
-        </div>
-      </div>
+
     </div>
   </section>
 

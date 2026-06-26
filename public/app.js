@@ -103,74 +103,121 @@ async function loadFrontier() {
 
 function render() {
   const { item, answers } = cur();
-  // item card
+
+  // FAQ question card : question + metadata (no answer)
+  const pill = (label, val) => `<span class="pill"><span class="pill-l">${label} ·</span> ${val}</span>`;
   $('item-card').innerHTML = `
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="display:flex;align-items:center;gap:7px;">
-        <span class="badge">${item.page_type || 'FAQ'}</span>
-        <span class="badge green">Test pair to annotate</span>
-      </div>
-      <span style="font-size:12px;color:#a4a49c;font-weight:600;">#${item.id}</span>
+    <div class="qhead">
+      <span class="qbadge">Question</span>
+      <span class="qid">#${item.id}</span>
     </div>
-    <div class="q">${mdLink(item.question)}</div>
-    <div class="ans">${mdLink(item.answer)}</div>
-    <div class="chips">
-      ${item.department ? `<div><div class="chip-l">Department</div><span class="chip">${item.department}</span></div>` : ''}
-      ${item.persona ? `<div><div class="chip-l">Persona</div><span class="chip">${item.persona}</span></div>` : ''}
-      ${item.intent ? `<div><div class="chip-l">Intent</div><span class="chip">${item.intent}</span></div>` : ''}
-      ${item.url ? `<a class="link" href="${item.url}" target="_blank" rel="noopener">URL ↗</a>` : ''}
+    <div class="qtext">${mdLink(item.question)}</div>
+    <div class="qchips">
+      ${item.department ? pill('Dept', item.department) : ''}
+      ${item.persona ? pill('Persona', item.persona) : ''}
+      ${item.intent ? pill('Intent', item.intent) : ''}
+      ${item.url ? `<a class="qurl" href="${item.url}" target="_blank" rel="noopener">URL ↗</a>` : ''}
     </div>`;
-  // options
+
+  // the answer being annotated, shown in the annotation panel
+  $('answer-quote').innerHTML = mdLink(item.answer);
+
+  // candidate options (blind, shuffled)
   $('options').innerHTML = (item.options || []).map((o) =>
-    `<label class="opt ${answers.bestIdx === o.idx ? 'sel' : ''}" data-idx="${o.idx}" style="margin-bottom:7px;">
+    `<label class="opt ${answers.bestIdx === o.idx ? 'sel' : ''}" data-idx="${o.idx}">
        <span class="radio"><span class="dot"></span></span><span class="text">${mdLink(o.text)}</span>
      </label>`).join('');
   $('options').querySelectorAll('.opt').forEach((el) =>
     el.addEventListener('click', () => { cur().answers.bestIdx = Number(el.dataset.idx); render(); }));
-  // seed card
+
+  // reference source seed card
   const s = item.seed;
   $('seed-card').innerHTML = s ? `
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <span class="badge">Source · ${s.page_type || 'FAQ'}</span><span style="font-size:12px;color:#a4a49c;font-weight:600;">#${s.id}</span>
+    <div class="src-head">
+      <span class="src-badge">Source · ${s.page_type || 'FAQ'}</span>
+      <span class="src-id">#${s.id}</span>
     </div>
-    <div class="q">${mdLink(s.question)}</div>
-    <div class="ans">${mdLink(s.answer)}</div>
-    <div class="chips">
-      ${s.department ? `<div><div class="chip-l">Department</div><span class="chip">${s.department}</span></div>` : ''}
-      ${s.url ? `<a class="link" href="${s.url}" target="_blank" rel="noopener">Source ↗</a>` : ''}
-    </div>` : '<div class="ans">No linked source seed.</div>';
+    <div class="src-q">${mdLink(s.question)}</div>
+    <div class="src-a">${mdLink(s.answer)}</div>
+    <div class="src-foot">
+      ${s.department ? `<div class="src-dept"><span class="src-dept-l">Department</span><span class="src-dept-v">${s.department}</span></div>` : ''}
+      ${s.url ? `<a class="src-link" href="${s.url}" target="_blank" rel="noopener">Source ↗</a>` : ''}
+    </div>` : '<div class="src-a">No linked source seed.</div>';
+
   renderMetrics();
-  // pager + counter
+
+  // Back: only when an earlier loaded item exists. Save: only when the item is
+  // fully answered. Next: only when a later loaded item exists, or the current
+  // item is saved (so a new pool item can be pulled).
   $('back').disabled = idx <= 0;
-  $('next').disabled = idx >= session.length - 1;
+  $('save').disabled = !isComplete();
+  $('next').disabled = !(idx < session.length - 1 || cur().saved);
   $('ct-done').textContent = completedCount;
-  $('a-status').textContent = cur().saved ? '✓ saved — edit and Save to update' : '';
+  $('a-status').textContent = cur().saved ? '✓ Saved — edit and Save to update' : '';
 }
 
-function metricBlock(key, title, help, opts) {
-  const answers = cur().answers;
-  const buttons = opts.map((o) =>
-    `<button data-key="${key}" data-val="${o.val}" class="${answers[key] === o.val ? 'sel' : ''}" style="${answers[key] === o.val ? 'background:' + o.color + ';border-color:' + o.color : ''}">${o.label}</button>`
+function scaleMetric(key, title, help) {
+  const v = cur().answers[key];
+  const btns = [1, 2, 3, 4, 5].map((n) =>
+    `<button data-key="${key}" data-val="${n}"${v === n ? ' style="background:#2f6f8f;border-color:#2f6f8f;color:#fff;font-weight:700;"' : ''}>${n}</button>`
   ).join('');
-  return `<div class="metric" style="margin-bottom:13px;"><span class="title">${title}</span><span class="help">${help}</span><div class="opts">${buttons}</div></div>`;
+  return `<div class="metric">
+    <span class="m-title">${title}</span>
+    <span class="m-help">${help}</span>
+    <div class="m-btns">${btns}</div>
+    <div class="m-ends"><span>Low</span><span>High</span></div>
+  </div>`;
+}
+
+function ynMetric(key, title, help, invertGoodNo, bottomSpacer) {
+  const v = cur().answers[key];
+  const opts = [
+    { val: 1, label: 'Yes', color: invertGoodNo ? '#b3543f' : '#2f8f5b' },
+    { val: 0, label: 'No', color: invertGoodNo ? '#2f8f5b' : '#b3543f' },
+  ];
+  const btns = opts.map((o) =>
+    `<button data-key="${key}" data-val="${o.val}"${v === o.val ? ` style="background:${o.color};border-color:${o.color};color:#fff;font-weight:700;"` : ''}>${o.label}</button>`
+  ).join('');
+  // when shown beside the 1–5 scales, an invisible end-label row keeps the
+  // Yes/No buttons on the same baseline as the scale buttons
+  const spacer = bottomSpacer ? '<div class="m-ends" style="visibility:hidden;"><span>·</span></div>' : '';
+  return `<div class="metric">
+    <span class="m-title">${title}</span>
+    <span class="m-help">${help}</span>
+    <div class="m-btns">${btns}</div>
+    ${spacer}
+  </div>`;
 }
 
 function renderMetrics() {
   const item = cur().item;
-  const scaleOpts = (n) => Array.from({ length: n }, (_, i) => ({ val: i + 1, label: String(i + 1), color: '#2f6f8f' }));
-  const yn = (invertGoodNo) => [
-    { val: 1, label: 'Yes', color: invertGoodNo ? '#b3543f' : '#2f8f5b' },
-    { val: 0, label: 'No', color: invertGoodNo ? '#2f8f5b' : '#b3543f' },
-  ];
-  let html = metricBlock('accuracy', 'Answer accuracy', 'Is the answer factually correct and complete? 1 = wrong · 5 = fully correct.', scaleOpts(5));
-  html += metricBlock('source_relevance', 'Source relevance', 'Does the linked source support the answer? 1 = unrelated · 5 = directly backs it.', scaleOpts(5));
-  if (hasLink(item.answer)) html += metricBlock('valid_link', 'Valid link', 'Is the link in the answer a valid, live GMU URL?', yn(false));
-  if (yesno(item.intent)) {
-    html += metricBlock('exact_matching', 'Exact matching', "Does the answer exactly match the question's intent?", yn(false));
-    html += metricBlock('risk_of_harm', 'Risk of harm', 'Could acting on this response cause harm?', yn(true));
+  const showLink = hasLink(item.answer);
+  const showYesNo = yesno(item.intent);
+
+  let grid = scaleMetric('accuracy', 'Answer accuracy',
+    'Is the answer factually correct and complete? <strong>1</strong> = wrong · <strong>5</strong> = fully correct.');
+  grid += scaleMetric('source_relevance', 'Source relevance',
+    'Does the linked source support the answer? <strong>1</strong> = unrelated · <strong>5</strong> = directly backs it.');
+  if (showLink) {
+    grid += ynMetric('valid_link', 'Valid link in answer',
+      'Is the URL a valid GMU (<strong>gmu.edu</strong>) address that currently loads?', false, true);
   }
+
+  const cols = showLink ? '1fr 1fr 1fr' : '1fr 1fr';
+  let html = `<div class="m-grid" style="grid-template-columns:${cols};">${grid}</div>`;
+
+  if (showYesNo) {
+    html += `<div class="yn-group">
+      <span class="yn-group-h">If intent &nbsp;·&nbsp; Yes / No</span>
+      <div class="yn-grid">
+        ${ynMetric('exact_matching', 'Exact Matching', "Does the answer exactly match the question's intent?", false)}
+        ${ynMetric('risk_of_harm', 'Risk of harm', 'Could acting on this response lead to a harmful or undesired outcome?', true)}
+      </div>
+    </div>`;
+  }
+
   $('metrics').innerHTML = html;
-  $('metrics').querySelectorAll('.opts button').forEach((b) =>
+  $('metrics').querySelectorAll('button[data-key]').forEach((b) =>
     b.addEventListener('click', () => { cur().answers[b.dataset.key] = Number(b.dataset.val); render(); }));
 }
 
@@ -181,25 +228,44 @@ function requiredKeys(item) {
   return keys;
 }
 
+// the current item is ready to save once a best option and every applicable
+// metric is answered
+function isComplete() {
+  const { item, answers } = cur();
+  if (answers.bestIdx === undefined) return false;
+  return requiredKeys(item).every((k) => answers[k] !== undefined);
+}
+
 async function onSave() {
   const { item, answers } = cur();
   if (answers.bestIdx === undefined) { $('a-status').textContent = 'Pick the best option first.'; return; }
   for (const k of requiredKeys(item)) if (answers[k] === undefined) { $('a-status').textContent = 'Please answer all metrics.'; return; }
   const payload = { annotator_id: Number(annotatorId), item_id: item.id, best_option_idx: answers.bestIdx };
   for (const k of requiredKeys(item)) payload[k] = answers[k];
+  const firstSave = !cur().saved;
   $('save').disabled = true;
-  const res = await fetch('/annotate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+  let res;
+  try {
+    res = await fetch('/annotate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+  } catch (e) { $('save').disabled = false; $('a-status').textContent = 'Save failed — try again.'; return; }
   $('save').disabled = false;
   if (!res.ok) { $('a-status').textContent = 'Save failed — try again.'; return; }
-  if (!cur().saved) { cur().saved = true; completedCount += 1; }
-  // advance: forward to a loaded item, else fetch a new one from the pool
-  if (idx < session.length - 1) { idx += 1; render(); }
-  else loadFrontier();
+  if (firstSave) { cur().saved = true; completedCount += 1; }
+  render();
+  $('a-status').textContent = firstSave ? '✓ Annotation saved' : '↻ Annotation updated';
+}
+
+// Save records the current item in place; Next advances (pulling a new pool
+// item once the frontier item is saved); Back revisits earlier loaded items.
+function onNext() {
+  if (idx < session.length - 1) { idx += 1; render(); return; }
+  if (!cur().saved) { $('a-status').textContent = 'Save this item before moving on.'; return; }
+  loadFrontier();
 }
 
 $('save').addEventListener('click', onSave);
 $('back').addEventListener('click', () => { if (idx > 0) { idx -= 1; render(); } });
-$('next').addEventListener('click', () => { if (idx < session.length - 1) { idx += 1; render(); } });
+$('next').addEventListener('click', onNext);
 
 // ---------- boot ----------
 if (annotatorId) startAnnotating(); else show('view-email');

@@ -30,12 +30,12 @@
   button{font-family:inherit;}
 </style>
 </helmet>
-<div style="height:100vh;padding:18px 0;overflow:hidden;">
+<div style="height:100vh;padding:8px 0;overflow:hidden;">
 
   <div style="width: 90%; max-width: 1480px; margin: 0 auto; position: relative">
 
     <!-- page caption -->
-    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px;padding-bottom:9px;border-bottom:1px solid #e0e0da;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:5px;padding-bottom:6px;border-bottom:1px solid #e0e0da;">
       <span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3a3a36;">Patriotbot FAQ Annotation</span>
       <span style="font-size:12px;color:#6b6b64;">First name <span style="color:#c2c2ba;">|</span> email</span>
     </div>
@@ -46,176 +46,163 @@
       <div style="display:flex;flex-direction:column;">
 
         <!-- role label: target -->
-        <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 6px; position: relative">
+        <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 4px; position: relative">
           <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#2f6f8f;padding:3px 9px;border-radius:5px;">To annotate</span>
-          <span style="font-size:12.5px;color:#6b6b64;">Synthesized FAQ — the question being reviewed</span>
         <p style="margin:0;margin-left:auto;display:flex;align-items:baseline;gap:1px;font-size:12px;font-weight:600;color:#a4a49c;letter-spacing:.02em;"><span style="font-size:13px;font-weight:700;color:#2f6f8f;">1</span> / 300</p></div>
 
-        <!-- grouped unit: target + candidates + source -->
-        <div style="border:1px solid #dcdcd4;background:#f9f9f6;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:13px;">
-
-        <!-- ----- record card 1 (annotation target, emphasized) ----- -->
-        <div style="background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:15px 20px;display:flex;flex-direction:column;gap:6px;">
-          <div style="display:flex;align-items:center;justify-content:space-between;">
+        <!-- ===== MAJOR DIV: question heading + answer + candidate options ===== -->
+        <!-- ===== FAQ QUESTION : the hero / most important item ===== -->
+        <div style="border:1.5px solid #2f6f8f;background:#eef4f7;box-shadow:0 0 0 3px #eef4f7;border-radius:12px;padding:10px 20px 11px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;">
             <div style="display:flex;align-items:center;gap:7px;">
-              <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b6b64;background:#efefea;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;">FAQ</span>
-              <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3f7a52;background:#e6f4ea;border:1px solid #c5e3cf;padding:3px 9px;border-radius:5px;">Test pair to annotate</span>
+              <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#2f6f8f;padding:3px 9px;border-radius:5px;">Question</span>
             </div>
-            <span style="font-size:12px;color:#a4a49c;font-weight:600;">#67</span>
+            <span style="font-size:12px;color:#7e9aa6;font-weight:600;">#67</span>
           </div>
-
-          <div style="font-size:18px;font-weight:700;line-height:1.4;color:#1a1a17;">If I got a D in my prereq course, do I retake it or can I move on?</div>
-
-          <div style="font-size:15px;line-height:1.65;color:#4a4a44;">You must retake it. A D does not meet the requirement of a C or better for a course used to satisfy a CS prerequisite.</div>
-
-          <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;">
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;">Department</span>
-              <span style="font-size:13px;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;">Computer Science</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;">Persona</span>
-              <span style="font-size:13px;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;">incoming freshman</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a0a098;font-weight:700;">Intent</span>
-              <span style="font-size:13px;color:#33332f;background:#f1f1ec;border:1px solid #e2e2db;padding:4px 11px;border-radius:999px;">comparison of options</span>
-            </div>
-            <a href="https://cs.gmu.edu/academics/student-resources" target="_blank" rel="noopener" style="margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#33332f;border:1px solid #c9c9c1;padding:7px 15px;border-radius:6px;white-space:nowrap;">URL ↗</a>
+          <div style="font-size:18px;font-weight:700;line-height:1.26;color:#173947;letter-spacing:-.01em;text-wrap:pretty;">If I got a D in my prereq course, do I retake it or can I move on?</div>
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:12px;color:#33332f;background:#fff;border:1px solid #cdddE3;padding:4px 11px;border-radius:999px;"><span style="color:#7e9aa6;font-weight:600;">Dept ·</span> Computer Science</span>
+            <span style="font-size:12px;color:#33332f;background:#fff;border:1px solid #cdddE3;padding:4px 11px;border-radius:999px;"><span style="color:#7e9aa6;font-weight:600;">Persona ·</span> incoming freshman</span>
+            <span style="font-size:12px;color:#33332f;background:#fff;border:1px solid #cdddE3;padding:4px 11px;border-radius:999px;"><span style="color:#7e9aa6;font-weight:600;">Intent ·</span> comparison of options</span>
+            <a href="https://cs.gmu.edu/academics/student-resources" target="_blank" rel="noopener" style="margin-left:auto;font-size:12px;font-weight:600;text-decoration:none;color:#2f6f8f;border:1px solid #cdddE3;background:#fff;padding:5px 13px;border-radius:6px;white-space:nowrap;">URL ↗</a>
           </div>
         </div>
+        <!-- /FAQ question -->
 
-        <!-- pick-best row : choose the best answer from candidate options -->
-        <div style="background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:9px;">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;">Pick the best option below, generated from SFT models</span>
-          <div style="display:flex;flex-direction:column;gap:7px;">
+        <!-- candidate options : separate card below the FAQ -->
+        <div style="background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:10px 18px;margin-top:9px;display:flex;flex-direction:column;gap:7px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;">For the question above, pick the best answer generated from SFT models</span>
+          <div style="display:flex;flex-direction:column;gap:6px;">
             <sc-for list="{{ answerOptions }}" as="opt" hint-placeholder-count="3">
               <label style="{{ opt.style }}" onClick="{{ opt.onClick }}">
                 <span style="{{ opt.radioStyle }}"><span style="{{ opt.dotStyle }}"></span></span>
-                <span style="font-size:14px;line-height:1.55;color:#33332f;">{{ opt.text }}</span>
+                <span style="font-size:13.5px;line-height:1.4;color:#33332f;">{{ opt.text }}</span>
               </label>
             </sc-for>
           </div>
         </div>
 
-        </div>
-        <!-- /grouped unit (target + candidates) -->
+        <!-- annotation panel -->
+      <div style="background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:10px 16px;margin-top:7px;display:flex;flex-direction:column;gap:7px;">
 
-        <!-- connector: synthesized-from relationship -->
-        <div style="display:flex;align-items:center;gap:10px;padding:0;margin-left:6px;margin-top:12px;">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;">Synthesized from</span>
-          <span style="flex:1;height:1px;background:#e3e3dd;"></span>
-          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;background:#ebebe6;padding:3px 9px;border-radius:5px;">Source seed</span>
+        <div style="display:flex;flex-direction:column;gap:7px;padding-bottom:8px;border-bottom:1px solid #f0f0eb;">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#3a3a36;">For the question above, read the answer item below and annotate.</span>
+          <div style="font-size:13.5px;line-height:1.45;color:#33332f;background:#faf9f6;border:1px solid #e7e7e1;border-left:3px solid #2f6f8f;border-radius:0 8px 8px 0;padding:8px 12px;">You must retake it. A D does not meet the requirement of a C or better for a course used to satisfy a CS prerequisite.</div>
         </div>
 
-        <!-- ----- record card 2 (source seed, de-emphasized reference) ----- -->
-        <div style="background:#f7f7f3;border:1px solid #e7e7e1;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;align-items:center;justify-content:space-between;">
-            <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8c8c84;background:#ededE7;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;">Source · FAQ</span>
-            <span style="font-size:12px;color:#a4a49c;font-weight:600;">#3</span>
-          </div>
+        <!-- top metrics : 3 across -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;">
 
-          <div style="font-size:16px;font-weight:700;line-height:1.45;color:#55554e;">If I receive a C- or D in a course intended to satisfy a prerequisite for a CS course, must I retake that course?</div>
-
-          <div style="font-size:14px;line-height:1.65;color:#6b6b64;">Yes. You must retake any course that is intended to satisfy a prerequisite for a CS course if you do not receive a C or better in that course.</div>
-
-          <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;">
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#b0b0a8;font-weight:700;">Department</span>
-              <span style="font-size:13px;color:#6b6b64;background:#efefe9;border:1px solid #e4e4dd;padding:4px 11px;border-radius:999px;">Computer Science</span>
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <span style="font-size:14px;font-weight:600;color:#2a2a26;">Answer accuracy</span>
+            <span style="font-size:11px;line-height:1.4;color:#8c8c84;">Is the answer factually correct and complete? <strong style="font-weight:600;color:#6b6b64;">1</strong> = wrong · <strong style="font-weight:600;color:#6b6b64;">5</strong> = fully correct.</span>
+            <div style="display:flex;gap:6px;margin-top:auto;">
+              <sc-for list="{{ scale1Buttons }}" as="b" hint-placeholder-count="5">
+                <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+              </sc-for>
             </div>
-            <a href="https://cs.gmu.edu/academics/student-resources" target="_blank" rel="noopener" style="margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#6b6b64;border:1px solid #d2d2ca;padding:7px 15px;border-radius:6px;white-space:nowrap;">Source ↗</a>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:#a4a49c;"><span>Low</span><span>High</span></div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <span style="font-size:14px;font-weight:600;color:#2a2a26;">Source relevance</span>
+            <span style="font-size:11px;line-height:1.4;color:#8c8c84;">Does the linked source support the answer? <strong style="font-weight:600;color:#6b6b64;">1</strong> = unrelated · <strong style="font-weight:600;color:#6b6b64;">5</strong> = directly backs it.</span>
+            <div style="display:flex;gap:6px;margin-top:auto;">
+              <sc-for list="{{ scale2Buttons }}" as="b" hint-placeholder-count="5">
+                <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+              </sc-for>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:#a4a49c;"><span>Low</span><span>High</span></div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <span style="font-size:14px;font-weight:600;color:#2a2a26;">Valid Link</span>
+            <span style="font-size:11px;line-height:1.4;color:#8c8c84;">Is the URL a valid GMU (<strong style="font-weight:600;color:#6b6b64;">gmu.edu</strong>) address that currently loads?</span>
+            <div style="display:flex;gap:6px;">
+              <sc-for list="{{ linkButtons }}" as="b" hint-placeholder-count="2">
+                <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- group : intent-based yes/no metrics -->
+        <div style="border:1px solid #e7e7e1;background:#faf9f6;border-radius:9px;padding:9px 12px;display:flex;flex-direction:column;gap:5px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;">If intent &nbsp;·&nbsp; Yes / No</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <span style="font-size:14px;font-weight:600;color:#2a2a26;">Exact Matching</span>
+              <span style="font-size:11px;line-height:1.4;color:#8c8c84;">Does the answer exactly match the question's intent?</span>
+              <div style="display:flex;gap:6px;margin-top:auto;">
+                <sc-for list="{{ exactButtons }}" as="b" hint-placeholder-count="2">
+                  <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+                </sc-for>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <span style="font-size:14px;font-weight:600;color:#2a2a26;">Risk of harm</span>
+              <span style="font-size:11px;line-height:1.4;color:#8c8c84;">Could acting on this response lead to a harmful or undesired outcome?</span>
+              <div style="display:flex;gap:6px;margin-top:auto;">
+                <sc-for list="{{ harmButtons }}" as="b" hint-placeholder-count="2">
+                  <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
+                </sc-for>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- pagination -->
-        <div style="display:flex;gap:10px;margin-top:13px;">
-          <button onClick="{{ onBack }}" style="flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">← Back</button>
-          <button onClick="{{ onNext }}" style="flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">Next →</button>
+        <div style="display:flex;flex-direction:column;gap:7px;padding-top:8px;border-top:1px solid #f0f0eb;">
+          <div style="display:flex;gap:10px;">
+            <button onClick="{{ onBack }}" style="flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">← Back</button>
+            <button onClick="{{ onSave }}" style="{{ saveStyle }}">Save</button>
+            <button onClick="{{ onNext }}" style="flex:1;padding:10px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">Next →</button>
+          </div>
+          <span style="min-height:14px;font-size:12px;font-weight:600;color:#2f6f8f;">{{ status }}</span>
         </div>
 
       </div>
 
-      <!-- ========== COLUMN 2 : annotation panel ========== -->
-      <div style="background:#fff;border:1.5px solid #2f6f8f;box-shadow:0 0 0 3px #eef4f7;border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:13px;">
+      </div>
 
-        <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid #f0f0eb;">
-          <span style="font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3a3a36;">Annotate</span>
-        </div>
-
-        <!-- scale 1 -->
-        <div style="display:flex;flex-direction:column;gap:6px;">
-          <span style="font-size:14px;font-weight:600;color:#2a2a26;">Answer accuracy</span>
-          <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Is the answer factually correct and complete for the question? <strong style="font-weight:600;color:#6b6b64;">1</strong> = wrong or misleading · <strong style="font-weight:600;color:#6b6b64;">5</strong> = fully correct &amp; complete.</span>
-          <div style="display:flex;gap:7px;">
-            <sc-for list="{{ scale1Buttons }}" as="b" hint-placeholder-count="5">
-              <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
-            </sc-for>
+      <!-- ========== COLUMN 2 : reference source FAQ ========== -->
+      <div style="display:flex;flex-direction:column;gap:10px;">
+          <!-- reference: actual source QnA -->
+          <div style="display:flex;align-items:center;gap:10px;padding:0;margin-left:6px;margin-top:12px;margin-bottom:10px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;">For reference — the actual Q&amp;A from GMU</span>
+            <span style="flex:1;height:1px;background:#e3e3dd;"></span>
           </div>
-          <div style="display:flex;justify-content:space-between;font-size:11px;color:#a4a49c;">
-            <span>Low</span><span>High</span>
-          </div>
-        </div>
 
-        <!-- scale 2 -->
-        <div style="display:flex;flex-direction:column;gap:6px;">
-          <span style="font-size:14px;font-weight:600;color:#2a2a26;">Source relevance</span>
-          <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Does the linked source actually support the answer? <strong style="font-weight:600;color:#6b6b64;">1</strong> = unrelated page · <strong style="font-weight:600;color:#6b6b64;">5</strong> = source directly backs the answer.</span>
-          <div style="display:flex;gap:7px;">
-            <sc-for list="{{ scale2Buttons }}" as="b" hint-placeholder-count="5">
-              <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
-            </sc-for>
-          </div>
-          <div style="display:flex;justify-content:space-between;font-size:11px;color:#a4a49c;">
-            <span>Low</span><span>High</span>
-          </div>
-        </div>
+          <!-- ----- record card 2 (source seed, de-emphasized reference) ----- -->
+          <div style="background:#f7f7f3;border:1px solid #e7e7e1;border-radius:10px;padding:13px 18px;display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8c8c84;background:#ededE7;border:1px solid #e2e2db;padding:3px 9px;border-radius:5px;">Source · FAQ</span>
+              <span style="font-size:12px;color:#a4a49c;font-weight:600;">#3</span>
+            </div>
 
-        <!-- metric 3 : valid link (yes/no) -->
-        <div style="display:flex;flex-direction:column;gap:6px;">
-          <span style="font-size:14px;font-weight:600;color:#2a2a26;">Valid Link</span>
-          <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Is the URL a valid GMU (<strong style="font-weight:600;color:#6b6b64;">gmu.edu</strong>) address that currently loads? <strong style="font-weight:600;color:#6b6b64;">Yes</strong> = valid &amp; live · <strong style="font-weight:600;color:#6b6b64;">No</strong> = broken or off-domain.</span>
-          <div style="display:flex;gap:7px;">
-            <sc-for list="{{ linkButtons }}" as="b" hint-placeholder-count="2">
-              <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
-            </sc-for>
-          </div>
-        </div>
+            <div style="font-size:16px;font-weight:700;line-height:1.45;color:#55554e;">If I receive a C- or D in a course intended to satisfy a prerequisite for a CS course, must I retake that course?</div>
 
-        <!-- group : intent-based yes/no metrics -->
-        <div style="border:1px solid #e7e7e1;background:#faf9f6;border-radius:9px;padding:12px 13px;display:flex;flex-direction:column;gap:11px;">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a9a92;">If intent &nbsp;·&nbsp; Yes / No</span>
+            <div style="font-size:14px;line-height:1.65;color:#6b6b64;">Yes. You must retake any course that is intended to satisfy a prerequisite for a CS course if you do not receive a C or better in that course.</div>
 
-          <!-- exact matching -->
-          <div style="display:flex;flex-direction:column;gap:6px;">
-            <span style="font-size:14px;font-weight:600;color:#2a2a26;">Exact Matching</span>
-            <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Does the answer exactly match the question's intent? <strong style="font-weight:600;color:#6b6b64;">Yes</strong> = direct match · <strong style="font-weight:600;color:#6b6b64;">No</strong> = partial or off-target.</span>
-            <div style="display:flex;gap:7px;">
-              <sc-for list="{{ exactButtons }}" as="b" hint-placeholder-count="2">
-                <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
-              </sc-for>
+            <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #f0f0eb;">
+              <div style="display:flex;flex-direction:column;gap:4px;">
+                <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#b0b0a8;font-weight:700;">Department</span>
+                <span style="font-size:13px;color:#6b6b64;background:#efefe9;border:1px solid #e4e4dd;padding:4px 11px;border-radius:999px;">Computer Science</span>
+              </div>
+              <a href="https://cs.gmu.edu/academics/student-resources" target="_blank" rel="noopener" style="margin-left:auto;font-size:13px;font-weight:600;text-decoration:none;color:#6b6b64;border:1px solid #d2d2ca;padding:7px 15px;border-radius:6px;white-space:nowrap;">Source ↗</a>
             </div>
           </div>
 
-          <!-- risk of harm -->
-          <div style="display:flex;flex-direction:column;gap:6px;">
-            <span style="font-size:14px;font-weight:600;color:#2a2a26;">Risk of harm</span>
-            <span style="font-size:12px;line-height:1.5;color:#8c8c84;">Could acting on this response lead to a harmful or undesired outcome? <strong style="font-weight:600;color:#6b6b64;">Yes</strong> = potential harm · <strong style="font-weight:600;color:#6b6b64;">No</strong> = safe to act on.</span>
-            <div style="display:flex;gap:7px;">
-              <sc-for list="{{ harmButtons }}" as="b" hint-placeholder-count="2">
-                <button style="{{ b.style }}" onClick="{{ b.onClick }}">{{ b.val }}</button>
-              </sc-for>
-            </div>
+          <!-- how to annotate -->
+          <div style="background:#fff;border:1px solid #e3e3dd;border-radius:10px;padding:14px 18px;margin-top:6px;display:flex;flex-direction:column;gap:10px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a9a92;">How to annotate</span>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.55;color:#4a4a44;">
+              <li>Read the question and the generated answer, then pick the single best option from the candidates.</li>
+              <li>Rate <strong style="font-weight:600;color:#33332f;">Answer accuracy</strong> and <strong style="font-weight:600;color:#33332f;">Source relevance</strong> on the 1–5 scales.</li>
+              <li>Confirm the <strong style="font-weight:600;color:#33332f;">Valid Link</strong>, then judge <strong style="font-weight:600;color:#33332f;">Exact Matching</strong> and <strong style="font-weight:600;color:#33332f;">Risk of harm</strong>.</li>
+              <li>Use the reference Q&amp;A above to check facts, then <strong style="font-weight:600;color:#33332f;">Save</strong> and move to the next.</li>
+            </ol>
           </div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid #f0f0eb;margin-top:auto;">
-          <div style="display:flex;gap:10px;">
-            <button onClick="{{ onSave }}" style="{{ saveStyle }}">Save</button>
-            <button onClick="{{ onUpdate }}" style="flex:1;padding:11px 0;font-size:14px;font-weight:600;cursor:pointer;color:#33332f;background:#fff;border:1px solid #c9c9c1;border-radius:7px;">Update</button>
-          </div>
-          <div style="min-height:16px;font-size:12px;font-weight:600;color:#2f6f8f;">{{ status }}</div>
-        </div>
-
       </div>
 
     </div>
@@ -244,7 +231,7 @@ class Component extends DCLogic {
           alignItems: "flex-start",
           gap: "11px",
           cursor: "pointer",
-          padding: "10px 12px",
+          padding: "5px 12px",
           borderRadius: "8px",
           border: "1px solid " + (sel ? accent : "#e3e3dd"),
           background: sel ? "#eef4f7" : "#fafaf7",
@@ -284,7 +271,7 @@ class Component extends DCLogic {
         onClick: () => this.setState({ [key]: label, status: "" }),
         style: {
           flex: 1,
-          padding: "11px 0",
+          padding: "6px 0",
           fontSize: "14px",
           cursor: "pointer",
           fontWeight: sel ? "700" : "500",
@@ -308,7 +295,7 @@ class Component extends DCLogic {
         onClick: () => this.setState({ [key]: v, status: "" }),
         style: {
           flex: 1,
-          padding: "11px 0",
+          padding: "6px 0",
           fontSize: "15px",
           cursor: "pointer",
           fontWeight: sel ? "700" : "500",
@@ -336,7 +323,7 @@ class Component extends DCLogic {
       status: this.state.status,
       saveStyle: {
         flex: 1,
-        padding: "11px 0",
+        padding: "8px 0",
         fontSize: "14px",
         fontWeight: "700",
         cursor: "pointer",
