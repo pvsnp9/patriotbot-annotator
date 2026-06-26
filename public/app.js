@@ -130,20 +130,6 @@ function render() {
   $('options').querySelectorAll('.opt').forEach((el) =>
     el.addEventListener('click', () => { cur().answers.bestIdx = Number(el.dataset.idx); render(); }));
 
-  // reference source seed card
-  const s = item.seed;
-  $('seed-card').innerHTML = s ? `
-    <div class="src-head">
-      <span class="src-badge">Source · ${s.page_type || 'FAQ'}</span>
-      <span class="src-id">#${s.id}</span>
-    </div>
-    <div class="src-q">${mdLink(s.question)}</div>
-    <div class="src-a">${mdLink(s.answer)}</div>
-    <div class="src-foot">
-      ${s.department ? `<div class="src-dept"><span class="src-dept-l">Department</span><span class="src-dept-v">${s.department}</span></div>` : ''}
-      ${s.url ? `<a class="src-link" href="${s.url}" target="_blank" rel="noopener">Source ↗</a>` : ''}
-    </div>` : '<div class="src-a">No linked source seed.</div>';
-
   renderMetrics();
 
   // Back: only when an earlier loaded item exists. Save: only when the item is
